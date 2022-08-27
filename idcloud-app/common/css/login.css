@@ -1,0 +1,136 @@
+.main {
+	height: 100%;
+}
+
+.logintop {
+	position: relative;
+	height: 40%;
+	background-image: url(../../static/loginbackground.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.logo-img {
+	display: flex;
+	background-image: url(../../static/demo.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 70px;
+	width: 70px;
+}
+
+.logo-img {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-45%, 10%);
+}
+
+/* *******输入框****** */
+.uni-common-mt {
+	margin-top: 8%;
+}
+
+.uni-column {
+	background: #FFFFFF;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 75%;
+	margin: 0 auto;
+	border-bottom: 1upx solid #CCCCCC;
+}
+
+.uni-list {
+	border-top: 1upx solid #FFFFFF;
+	width: 80%;
+	height: 100upx;
+	margin: 0 auto;
+}
+
+.faicon {
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	position: relative;
+}
+
+.fa-img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	max-width: 75%;
+	max-height: 75%;
+}
+
+.build {
+	background-image: url(../../static/10005.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.user {
+	background-image: url(../../static/user.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.pass {
+	background-image: url(../../static/pass.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/* *******输入框*结束***** */
+button {
+	width: 75%;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+
+
+
+/* ****实时数据一手掌握***** */
+.uni-bot {
+	position: fixed;
+	bottom: 5px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.uni-bot view {
+	color: #8a8782;
+}
+
+.uni-bot view:nth-of-type(1) {
+	position: relative;
+	width: 125px;
+	height: 14px;
+	margin-bottom: 5px;
+}
+
+
+.img {
+	background-image: url(../../static/sssjyszw.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* ****实时数据一手掌握*结束**** */

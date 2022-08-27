@@ -1,0 +1,21 @@
+{
+	"name": "idcloud-app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "main.js",
+	"repository": {
+		"type": "git",
+		"url": "https://code.aliyun.com/idcloud-app/idcloud-app.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cross-env": "^7.0.2",
+		"express": "^4.17.1",
+		"image-conversion": "^2.1.1",
+		"moment": "^2.26.0",
+		"uuid": "^8.3.0",
+		"uview-ui": "^1.6.3",
+		"vue-cli": "^2.9.6"
+	}
+}

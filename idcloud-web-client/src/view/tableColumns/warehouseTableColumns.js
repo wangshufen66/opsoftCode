@@ -1,0 +1,146 @@
+import auditTableColumns from './auditTableColumns';
+import disableTableColumns from './disableTableColumns';
+
+const warehouseInputPopupColumns=[
+  {
+    tag: "el-table-column",
+    label: "仓库代码",
+    prop: "number",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "仓库名称",
+    prop: "name",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "仓库类别",
+    prop: "type",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "Select",
+    options: [
+      {
+        label: "普通仓",
+        value: "0",
+        authority: {
+          idLoad: false,
+          idIf: true,
+          idDisable: false,
+          idShow: true,
+        },
+      },
+      {
+        label: "车间仓",
+        value: "1",
+        authority: {
+          idLoad: false,
+          idIf: true,
+          idDisable: false,
+          idShow: true,
+        },
+      },
+      {
+        label: "客户仓",
+        value: "2",
+        authority: {
+          idLoad: false,
+          idIf: true,
+          idDisable: false,
+          idShow: true,
+        },
+      },
+      {
+        label: "供应商仓",
+        value: "3",
+        authority: {
+          idLoad: false,
+          idIf: true,
+          idDisable: false,
+          idShow: true,
+        },
+      },
+    ],
+  },
+  {
+    tag: "el-table-column",
+    label: "地理位置",
+    prop: "address",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "负责人代码",
+    prop: "chargePersonNumber",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "负责人名称",
+    prop: "chargePersonName",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "负责人电话",
+    prop: "chargePersonPhone",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "备注",
+    prop: "note",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "制单人代码",
+    prop: "docMakerNumber",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "制单人姓名",
+    prop: "docMakerName",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "创建时间",
+    prop: "createTime",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "Datetime",
+  },
+  {
+    tag: "el-table-column",
+    label: "更新时间",
+    prop: "updateTime",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    resizable: false,
+    comp: "Datetime",
+  },
+];
+const warehouseTableColumns=[warehouseInputPopupColumns,auditTableColumns,disableTableColumns].flat(1);
+export {warehouseTableColumns as default,warehouseInputPopupColumns};

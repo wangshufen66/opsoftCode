@@ -1,0 +1,43 @@
+.property-panel {
+  position: relative;
+  border-left: solid 1px #e4e7ed;
+  width: 360px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.node-title {
+  font-size: 20px;
+  padding: 10px 5px;
+}
+.form{
+  flex: 1 0 0;
+  overflow: hidden;
+}
+.bpmn-tool {
+  overflow-y: auto;
+  padding-right: 5px;
+  height: calc(100% - 5px);
+}
+.button-add {
+  margin: 10px 0 10px 10px;
+}
+.btn-table {
+  margin-top: -20px;
+}
+.table-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+}
+.allReady {
+  width: 80px;
+  text-align: right;
+  vertical-align: middle;
+  float: left;
+  font-size: 14px;
+  color: #606266;
+  box-sizing: border-box;
+  padding: 0 12px 0 0;
+}

@@ -1,0 +1,11 @@
+<template>
+  <router-view />
+</template>
+
+<style lang="scss">
+body {
+  margin: 0;
+  padding: 0;
+  font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu 
+}
+</style>

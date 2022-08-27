@@ -1,0 +1,38 @@
+.inline-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  i {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+  }
+
+  span {
+    margin-left: 10px;
+    white-space: nowrap;
+    font-size: 15px;
+  }
+}
+
+.el-submenu {
+  /deep/ .el-icon-arrow-down {
+    font-size: 12px;
+    font-weight: bolder;
+    color: white;
+  }
+
+  //特殊处理
+  /deep/ .el-menu--inline {
+    .el-menu-item {
+      background-color: #363e4f !important;
+    }
+    .is-active {
+      background-color: #2d8bef !important;
+    }
+    /deep/ .el-submenu__title {
+      background-color: #363e4f !important;
+    }
+  }
+}

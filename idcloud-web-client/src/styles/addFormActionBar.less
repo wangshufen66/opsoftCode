@@ -1,0 +1,82 @@
+.el-btn-style-single {
+  color: #1890ff;
+  border: 1px solid #1890ff;
+}
+
+.el-btn-style {
+  color: #1890ff;
+}
+
+.el-btn-group-style {
+  display: flex;
+  //height: 32px;
+  //flex-wrap: nowrap;
+  margin-left: 6px;
+
+  ::v-deep {
+    .el-button:nth-of-type(1) {
+      border: 1px solid #1890ff;
+      border-right: 1px solid transparent;
+    }
+
+    .el-button:nth-of-type(2) {
+      border: 1px solid #1890ff;
+      border-left: 1px solid transparent;
+    }
+
+    .el-button:nth-of-type(2)::before {
+      content: "";
+      z-index: 2;
+      position: absolute;
+      width: 1px;
+      height: 16px;
+      top: 25%;
+      left: -1px;
+      bottom: 0;
+      background-color: #1890ff;
+    }
+  }
+
+  .el-btn-style {
+    color: #1890ff;
+  }
+}
+
+.option-dropdown {
+  ::v-deep {
+    .el-button {
+      //padding: 0 2px 0 10px;
+      padding-right: 2px;
+      padding-left: 10px;
+      border: 1px solid #1890ff;
+    }
+  }
+
+  .option-button {
+    //height: 32px;
+
+    * {
+      color: #1890ff;
+      margin: 0 2px;
+    }
+
+    i:nth-child(1) {
+      font-size: 18px;
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .dropdown-line-wrapper {
+    .dropdown-line {
+      line-height: 28px;
+      height: 28px;
+      text-align: center;
+      color: #1890ff;
+    }
+  }
+}
+
+@import "../view/systemManagement/systemManageStyle.less";

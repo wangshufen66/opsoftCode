@@ -1,0 +1,270 @@
+@font-face {
+  font-family: "opfont";
+  src: url("./../assets/fonts/opfont.woff2?t=1622790232484") format("woff2"),
+    url("./../assets/fonts/opfont.woff?t=1622790232484") format("woff"),
+    url("./../assets/fonts/opfont.ttf?t=1622790232484") format("truetype");
+}
+
+.opfont {
+  font-family: "opfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.opicon-down:before {
+  content: "\f9b6";
+}
+
+.opicon-edit-fill:before {
+  content: "\e625";
+}
+
+.opicon-outline-search:before {
+  content: "\e627";
+}
+
+.opicon-group-right:before {
+  content: "\e62b";
+}
+
+.opicon-group-left:before {
+  content: "\e62c";
+}
+
+.opicon-close:before {
+  content: "\e62d";
+}
+
+.opicon-plus:before {
+  content: "\e62e";
+}
+
+.opicon-remove:before {
+  content: "\e630";
+}
+
+.opicon-user:before {
+  content: "\e623";
+}
+
+.opicon-e-device:before {
+  content: "\e622";
+}
+
+.opicon-home:before {
+  content: "\e620";
+}
+
+.opicon-department:before {
+  content: "\e610";
+}
+
+.opicon-form-copy:before {
+  content: "\e611";
+}
+
+.opicon-feature:before {
+  content: "\e612";
+}
+
+.opicon-apps:before {
+  content: "\e613";
+}
+
+.opicon-dictionary:before {
+  content: "\e614";
+}
+
+.opicon-componentcfg:before {
+  content: "\e615";
+}
+
+.opicon-model:before {
+  content: "\e616";
+}
+
+.opicon-watermark:before {
+  content: "\e617";
+}
+
+.opicon-menus:before {
+  content: "\e61a";
+}
+
+.opicon-use-manage:before {
+  content: "\e61d";
+}
+
+.opicon-user-role:before {
+  content: "\e61e";
+}
+
+.opicon-message:before {
+  content: "\f9b5";
+}
+
+.opicon-help-doc:before {
+  content: "\e602";
+}
+
+.opicon-menu-group:before {
+  content: "\e603";
+}
+
+.opicon-tool-setting:before {
+  content: "\e608";
+}
+
+.opicon-layout:before {
+  content: "\e60e";
+}
+
+.opicon-schedule:before {
+  content: "\e600";
+}
+
+.opicon-label:before {
+  content: "\e626";
+}
+
+.opicon-table:before {
+  content: "\e60b";
+}
+
+.opicon-table-list:before {
+  content: "\e680";
+}
+
+.opicon-ren:before {
+  content: "\e60c";
+}
+
+.opicon-adddown:before {
+  content: "\e619";
+}
+
+.opicon-button1:before {
+  content: "\e601";
+}
+
+.opicon-clear:before {
+  content: "\e60d";
+}
+
+.opicon-table-search:before {
+  content: "\f9b4";
+}
+
+.opicon-panel:before {
+  content: "\e6b5";
+}
+
+.opicon-groupchart:before {
+  content: "\e633";
+}
+
+.opicon-linechart:before {
+  content: "\e7af";
+}
+
+.opicon-radarchart:before {
+  content: "\e7dc";
+}
+
+.opicon-gauge:before {
+  content: "\e69a";
+}
+
+.opicon-scatter:before {
+  content: "\e618";
+}
+
+.opicon-pie:before {
+  content: "\e61b";
+}
+
+.opicon-barchart:before {
+  content: "\e607";
+}
+
+.opicon-textarea:before {
+  content: "\e632";
+}
+
+.opicon-input:before {
+  content: "\e773";
+}
+
+.opicon-radioactive:before {
+  content: "\e75f";
+}
+
+.opicon-check-box-outline:before {
+  content: "\e63e";
+}
+
+.opicon-password:before {
+  content: "\e82b";
+}
+
+.opicon-switch:before {
+  content: "\e6c0";
+}
+
+.opicon-shuzi:before {
+  content: "\e61c";
+}
+
+.opicon-time:before {
+  content: "\e735";
+}
+
+.opicon-colorpicker:before {
+  content: "\e665";
+}
+
+.opicon-date:before {
+  content: "\e61f";
+}
+
+.opicon-upload:before {
+  content: "\e728";
+}
+
+.opicon-button:before {
+  content: "\e7fd";
+}
+
+.opicon-cascader:before {
+  content: "\e624";
+}
+
+.opicon-input1:before {
+  content: "\e629";
+}
+
+.opicon-row:before {
+  content: "\e62f";
+}
+
+.opicon-slider:before {
+  content: "\e631";
+}
+
+.opicon-time-range:before {
+  content: "\e634";
+}
+
+.opicon-date-range:before {
+  content: "\e605";
+}
+
+.opicon-rate:before {
+  content: "\e606";
+}
+
+.opicon-select:before {
+  content: "\ecb0";
+}

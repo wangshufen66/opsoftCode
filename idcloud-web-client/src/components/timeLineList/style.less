@@ -1,0 +1,57 @@
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .search-item {
+
+  }
+}
+
+.setting {
+  span {
+    margin-right: 0.5rem;
+  }
+
+  .count-select {
+    width: 5rem;
+  }
+}
+
+.time-line-list {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.2rem;
+  border: 1px solid #dcdde1;
+  margin-top: 5px;
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+
+    .column {
+      width: 12rem;
+
+      p {
+        font-size: 16px;
+        color: #f0932b;
+        text-align: left;
+      }
+    }
+    .edit-style{
+      position: absolute;
+      top: 56px;
+      right: 20px;
+      color: #0984e3;
+      font-size: 26px;
+      cursor: pointer;
+    }
+    .edit-style:hover{
+      color: #ff9f43;
+      font-size: 30px;
+    }
+  }
+}

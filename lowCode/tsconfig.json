@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "baseUrl": "./",
+    "paths": {
+      "@/plugins/*": ["src/plugins/*"],
+      "@/views/*": ["src/views/*"],
+      "@/router/*": ["src/router/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/shared/*": ["src/shared/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/config/*": ["src/config/*"],
+      "@/layout/*": ["src/layout/*"],
+      "@/components/*": ["src/components/*"],
+      "@/api/*": ["src/api/*"],
+      "@/directives/*": ["src/directives/*"]
+    },
+    "compilerOptions": {
+      "types": ["element-plus/global"]
+    }
+  },
+  "include": ["src/**/*", "./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.js", "./src/**/*.vue"],
+  "exclude": ["node_modules", "dist"]
+}

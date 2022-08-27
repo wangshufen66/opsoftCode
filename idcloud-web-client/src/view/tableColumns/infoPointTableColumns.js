@@ -1,0 +1,81 @@
+export default [
+  {
+    tag: "el-table-column",
+    label: "信息点代码",
+    prop: "number",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "信息点名称",
+    prop: "name",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "信息点单位",
+    prop: "unitName",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "显示类型",
+    prop: "type",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "Select",
+    options: [
+      {
+        label: "瞬时值",
+        value: "0",
+        authority: {
+          idLoad: false,
+          idIf: true,
+          idDisable: false,
+          idShow: true,
+        },
+      },
+      {
+        label: "区间值",
+        value: "1",
+        authority: {
+          idLoad: false,
+          idIf: true,
+          idDisable: false,
+          idShow: true,
+        },
+      }
+    ],
+  },
+  {
+    tag: "el-table-column",
+    label: "备注信息",
+    prop: "mark",
+    minWidth: 240,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "创建时间",
+    prop: "createTime",
+    minWidth: 240,
+    showOverflowTooltip: true,
+    comp: "Datetime",
+  },
+  {
+    tag: "el-table-column",
+    label: "修改时间",
+    prop: "updateTime",
+    minWidth: 240,
+    resizable: false,
+    showOverflowTooltip: true,
+    comp: "Datetime",
+  },
+];

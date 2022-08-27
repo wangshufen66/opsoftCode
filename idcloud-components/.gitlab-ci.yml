@@ -1,0 +1,17 @@
+image: node:latest
+cache:
+  paths:
+    - node_modules/
+
+build_dist:
+  only:
+    - master
+  script:
+    - pwd
+    - npm install
+    - npm run build
+    - rm -rf /dist/components/*
+    - cp -r dist /dist/components/
+    - pwd
+  tags:
+    - idc_components

@@ -1,0 +1,517 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabbar/home",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				}
+			}
+		},
+		{
+			"path": "pages/tabbar/apply",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/tabbar/calender",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/tabbar/my",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/myinfo",
+			"style": {
+				"navigationBarTitleText": "个人信息"
+			}
+		},
+		{
+			"path": "pages/home/manageapply",
+			"style": {
+				"navigationBarTitleText": "应用设置"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/home/errmsg",
+			"style": {
+				"navigationBarTitleText": "报警日志"
+			}
+		},
+		{
+			"path": "pages/home/notReady",
+			"style": {
+				"navigationBarTitleText": "敬请期待"
+			}
+		},
+		{
+			"path": "pages/home/notice",
+			"style": {
+				"navigationBarTitleText": "通知消息"
+			}
+		},
+		{
+			"path": "pages/home/noticedetil",
+			"style": {
+				"navigationBarTitleText": "通知详情"
+			}
+		},
+		{
+			"path": "pages/home/monitor",
+			"style": {
+				"navigationBarTitleText": "设备监测"
+			}
+		},
+		{
+			"path": "pages/home/control",
+			"style": {
+				"navigationBarTitleText": "设备控制"
+			}
+		},
+		{
+			"path": "pages/home/deviceDetail",
+			"style": {
+				"navigationBarTitleText": "设备详情"
+			}
+		},
+		{
+			"path": "pages/home/map-archive",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/home/map",
+			"style": {
+				"navigationBarTitleText": "设备地图"
+			}
+		},
+		{
+			"path": "pages/home/addEditCalender",
+			"style": {
+				"navigationBarTitleText": "添加日程"
+			}
+		},
+		{
+			"path": "pages/my/switchOrg",
+			"style": {
+				"navigationBarTitleText": "组织切换",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/home/envMonitor",
+			"style": {
+				"navigationBarTitleText": "环境监测",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/home/deviceMaintainence/index",
+			"style": {
+				"navigationBarTitleText": "工单汇报"
+			}
+		},
+		{
+			"path": "pages/home/deviceMaintainence/ticketDetail",
+			"style": {
+				"navigationBarTitleText": "汇报工单详情"
+			}
+		},
+		{
+			"path": "pages/home/deviceMaintainence/inputTicket",
+			"style": {
+				"navigationBarTitleText": "填写汇报内容"
+			}
+		},
+		{
+			"path": "pages/home/andon/main",
+			"style": {
+				"navigationBarBackgroundColor": "rgba(0,0,0,0)",
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					"titleNView": {
+						"type": "float",
+						"titleText": "Andon操作"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/home/andon/switch",
+			"style": {
+				"navigationBarBackgroundColor": "rgba(0,0,0,0)",
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					"titleNView": {
+						"type": "float",
+						"titleText": "切换工位"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/my/aboutUs",
+			"style": {
+				"navigationBarTitleText": "关于我们",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/my/systemConfig",
+			"style": {
+				"navigationBarTitleText": "系统设置",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/login/networkConfig",
+			"style": {
+				"navigationBarTitleText": "网络设置",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceRepair/deviceRepair",
+			"style": {
+				"navigationBarTitleText": "设备维修",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceRepair/ticket",
+			"style": {
+				"navigationBarTitleText": "设备维修工单",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceRepair/report",
+			"style": {
+				"navigationBarTitleText": "维修汇报",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceRepair/detail",
+			"style": {
+				"navigationBarTitleText": "维修汇报详情",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceCheck/deviceCheck",
+			"style": {
+				"navigationBarTitleText": "设备点检",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceCheck/ticket",
+			"style": {
+				"navigationBarTitleText": "设备点检工单",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceCheck/report",
+			"style": {
+				"navigationBarTitleText": "点检汇报",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceCheck/finish",
+			"style": {
+				"navigationBarTitleText": "汇报完成",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceCheck/createTicket",
+			"style": {
+				"navigationBarTitleText": "生成维修工单",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceCheck/detail",
+			"style": {
+				"navigationBarTitleText": "点检汇报详情",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceMaintenance/deviceMaintenance",
+			"style": {
+				"navigationBarTitleText": "设备保养",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+
+
+		{
+			"path": "pages/application/deviceMaintenance/ticket",
+			"style": {
+				"navigationBarTitleText": "设备保养工单",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceMaintenance/report",
+			"style": {
+				"navigationBarTitleText": "保养汇报",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/application/deviceMaintenance/detail",
+			"style": {
+				"navigationBarTitleText": "保养汇报详情",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+
+
+		{
+			"path": "pages/application/sparePart",
+			"style": {
+				"navigationBarTitleText": "备件领用",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+
+		{
+			"path": "pages/application/present/index",
+			"style": {
+				"navigationBarTitleText": "数据展示",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		},
+
+		{
+			"path": "pages/application/present/webview",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/application/present/jumper",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+
+		{
+			"path": "pages/application/deviceStatus/index",
+			"style": {
+				"navigationBarTitleText": "设备运行分析",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/deviceStatus/detail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/deviceUsage/index",
+			"style": {
+				"navigationBarTitleText": "利用率分析",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/deviceUsage/workshop",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/deviceOutput/index",
+			"style": {
+				"navigationBarTitleText": "设备产量分析",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/productAnalysis/index",
+			"style": {
+				"navigationBarTitleText": "成品产量分析",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/malfunctionAnalysis/index",
+			"style": {
+				"navigationBarTitleText": "故障分析",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/warningInfoV2/index",
+			"style": {
+				"navigationBarTitleText": "预警分析",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/deviceProcess/index",
+			"style": {
+				"navigationBarTitleText": "设备加工任务",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "筛选 ",
+							"fontSize": "16px",
+							"color": "#FFFFFF"
+						}]
+					}
+				},
+				"h5": {
+					"titleNView": {
+						"buttons": [{
+							"text": "筛选 ",
+							"fontSize": "16px",
+							"color": "#FFFFFF"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/application/deviceProcess/newdevice",
+			"style": {
+				"navigationBarTitleText": "设备加工任务",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/deviceProcess/shift",
+			"style": {
+				"navigationBarTitleText": "选择班次",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/deviceProcess/staff",
+			"style": {
+				"navigationBarTitleText": "选择人员",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/deviceProcess/device",
+			"style": {
+				"navigationBarTitleText": "选择设备",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/deviceProcess/taskInfo",
+			"style": {
+				"navigationBarTitleText": "加工任务信息",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/application/deviceProcess/material",
+			"style": {
+				"navigationBarTitleText": "选择物料",
+				"navigationBarBackgroundColor": "#007AFF",
+				"navigationBarTextStyle": "white"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8",
+		// "navigationStyle": "custom",
+		"app-plus": {
+			"titleView": false
+		}
+	},
+	"tabBar": {
+		"color": "#6d6c67",
+		"selectedColor": "#0075fe",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+				"pagePath": "pages/tabbar/home",
+				"iconPath": "static/com/tabbar/home3x.png",
+				"selectedIconPath": "static/com/tabbar/home-blue3x.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/tabbar/apply",
+				"iconPath": "static/com/tabbar/apply3x.png",
+				"selectedIconPath": "static/com/tabbar/apply-blue3x.png",
+				"text": "应用"
+			},
+			{
+				"pagePath": "pages/tabbar/calender",
+				"iconPath": "static/com/tabbar/calender3x.png",
+				"selectedIconPath": "static/com/tabbar/calender-blue3x.png",
+				"text": "日程"
+			},
+			{
+				"pagePath": "pages/tabbar/my",
+				"iconPath": "static/com/tabbar/my3x.png",
+				"selectedIconPath": "static/com/tabbar/my-blue3x.png",
+				"text": "我的"
+			}
+		]
+	}
+}

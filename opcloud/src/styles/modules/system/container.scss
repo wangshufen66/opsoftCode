@@ -1,0 +1,28 @@
+.page-content {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 24% 74%;
+  width: 100%;
+  flex: 1 0 0%;
+}
+
+.page-left {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.filter-tree {
+  overflow-y: auto;
+  flex: 1 0 0;
+}
+
+.page-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-wrap {
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+}

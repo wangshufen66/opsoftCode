@@ -1,0 +1,36 @@
+stages:
+  - dep
+  - prod
+cache:
+  paths:
+    - node_modules/
+jobdockerdep:
+  only:
+    - gitlab_dep
+  stage: dep
+  script:
+    - pwd
+    - node -v
+    - npm --version
+    - npm install
+    - npm run build:dep
+    - rm -rf /dist/dep/*
+    - cp -r dist /dist/dep/
+    - pwd
+  tags:
+    - idcloud-web-test-runner
+jobdockerpub:
+  only:
+    - gitlab_prod
+  stage: prod
+  script:
+    - pwd
+    - node -v
+    - npm --version
+    - npm install
+    - npm run build
+    - rm -rf /dist/prod/*
+    - cp -r dist /dist/prod/
+    - pwd
+  tags:
+    - idcweb_runner

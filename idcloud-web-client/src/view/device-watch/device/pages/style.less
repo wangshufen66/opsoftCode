@@ -1,0 +1,174 @@
+.device-container {
+  margin-top: 10px;
+  width: 100%;
+
+
+  .up-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 280px;
+
+    .up-left {
+      width: 100%;
+
+      .up-left-title-wrapper {
+        font-size: 28px;
+        font-weight: 500;
+        color: #4f4f4f;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .up-left-subtitle-wrapper {
+        height: 32px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: 400;
+        color: #b1b1b1;
+      }
+
+      .up-left-content-wrapper {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+        height: 220px;
+
+        .up-left-card {
+          display: grid;
+          grid-template-columns: 33.3% 33.3% 33.3%;
+          width: 100%;
+          height: 220px;
+          overflow: auto;
+
+          /deep/ .main-card {
+            min-width: 0;
+            height: auto;
+            margin-bottom: 10px;
+            padding: 5px 0;
+          }
+
+          /deep/ .checkbox-wrapper {
+            height: 0;
+          }
+
+          /deep/ .number-style {
+            font-size: 1.7rem;
+            font-weight: bolder;
+          }
+
+          /deep/ .title-wrapper {
+            p {
+              position: static;
+            }
+          }
+
+          /deep/ .right-column {
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .up-left-card-wrapper {
+        display: flex;
+        height: 206px;
+        width: 100%;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+
+        .up-left-card-style {
+          margin-bottom: 6px;
+          padding: 0 12px 0 0;
+          height: 200px;
+          width: 25%;
+        }
+      }
+
+      .up-left-img {
+        width: 100%;
+        height: 90%;
+        display: inline-block;
+        background-size: 60%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url('../../../../view/device-watch/device/assets/240-132.png');
+      }
+    }
+
+  }
+
+  .down-wrapper {
+    height: calc(100vh - 45px);
+    margin-top: 12px;
+
+    ::v-deep {
+      .el-tabs--card > .el-tabs__header .el-tabs__item.is-active {
+        background-color: #1890ff;
+        border-radius: 5px 5px 0 0;
+        color: white;
+      }
+
+      .el-tabs--card > .el-tabs__header .el-tabs__nav {
+        border: none;
+      }
+
+      .el-tabs__nav-wrap .is-top {
+        border-bottom: none;
+        border-left: none;
+        transition: 0ms;
+      }
+
+      .el-tabs__header {
+        border-bottom: 1px solid #1890ff;
+      }
+
+      .el-tabs__item:hover {
+        color: #4F4F4F;
+      }
+    }
+
+    .placeholder-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+
+      img {
+        margin: auto 0;
+        width: 180px;
+      }
+
+      span {
+        margin: auto 0;
+      }
+    }
+
+    .down-btn-wrapper {
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+        cursor: pointer;
+        position: relative;
+        top: 32px;
+        width: 22px;
+        height: 22px;
+        z-index: 2;
+      }
+    }
+
+    .down-card-department-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 24%);
+      grid-template-rows: 180px 180px;
+      gap: 12px 1%;
+    }
+
+  }
+
+}
+
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}

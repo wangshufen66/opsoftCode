@@ -1,0 +1,174 @@
+$color-normal:#48dbfb;
+$color-success:#2ed573;
+$color-info:white;
+$color-warning:orange;
+$color-danger:#ff3f34;
+$box-content-right: -110px;
+
+.font-normal{
+  color: $color-normal;
+  font-weight:900;
+}
+.font-success{
+  color: $color-success;
+  font-weight:900;
+}
+.font-info{
+  color: $color-info;
+  font-weight:900;
+}
+.font-warning{
+  color: $color-warning;
+  font-weight:900;
+}
+.font-danger{
+  color: $color-danger;
+  font-weight:900;
+}
+/*色块说明样式*/
+.color-box-explain{
+  color: black;
+  margin-left: 10px;
+  margin-bottom: 2px;
+}
+// 重写 el-tag
+.el-tag--dark {
+  background-color: $color-normal;
+  border-color: $color-normal;
+  font-weight:900;
+}
+.el-tag--dark.el-tag--info {
+  background-color: $color-info;
+  border-color: $color-info;
+}
+.el-tag--dark.el-tag--success {
+  background-color: $color-success;
+  border-color: $color-success;
+}
+.el-tag--dark.el-tag--warning {
+  background-color: $color-warning;
+  border-color: $color-warning;
+}
+.el-tag--dark.el-tag--danger {
+  background-color: $color-danger;
+  border-color: $color-danger;
+}
+
+.container{
+  position: relative;
+  width: 20%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+  grid-template-rows: auto;
+  grid-gap: 0 40px;
+  z-index: 2;
+  padding:3px 3px;
+  .box{
+    positon: absolute;
+    width: 150px;
+    height: 80px;
+    top: 4px;
+    left: 2px;
+    right: -80px;
+    bottom: 8px;
+    //background: #060c2196;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px none #060c2196;
+    border-radius: 5% 0;
+
+    .box-content{
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      right: $box-content-right;
+      height: 76px;
+      //background: #060c2196;
+      //为了兼容IE 和 Android 内核浏览器，要想使用透明度，只能通过rgba实现
+      background: rgba(6,12,33,.6);
+      //border: 1px solid #060c2196;
+      border: 1px solid rgba(6,12,33,.6);
+      border-radius: 5% 0;
+      .box-words-row{
+        margin-top: -3px;
+        margin-left: 10px;
+        font-size: 0.7rem;
+      }
+    }
+  }
+  .box:before{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: $box-content-right - 1px;
+    bottom: 6px;
+    background: #fff;
+    transform: skew(-3deg, -3deg);
+    z-index: -2;
+  }
+  .box:after{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: $box-content-right;
+    bottom: 6px;
+    //background: url("static/images/dragReport/jichuangb.png");
+    background-image: url('/static/images/dragReport/jichuangb.png');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    //filter: blur(2px);
+    z-index: -1;
+  }
+
+  .box:nth-child(1):before{
+    background: -webkit-linear-gradient(180deg, $color-normal, $color-normal); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(180deg, $color-normal, $color-normal); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(180deg, $color-normal, $color-normal); /* Firefox 3.6 - 15 */
+    background: linear-gradient(180deg, $color-normal, $color-normal); /* 标准的语法（必须放在最后） */
+  }
+  .box:nth-child(2):before{
+    background: -webkit-linear-gradient(180deg, $color-success, $color-success); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(180deg, $color-success, $color-success); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(180deg, $color-success, $color-success); /* Firefox 3.6 - 15 */
+    background: linear-gradient(180deg, $color-success, $color-success); /* 标准的语法（必须放在最后） */
+  }
+  .box:nth-child(3):before{
+    background: -webkit-linear-gradient(180deg, $color-info, $color-info); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(180deg, $color-info, $color-info); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(180deg, $color-info, $color-info); /* Firefox 3.6 - 15 */
+    background: linear-gradient(180deg, $color-info, $color-info); /* 标准的语法（必须放在最后） */
+  }
+  .box:nth-child(4):before{
+    background: -webkit-linear-gradient(180deg, $color-warning, $color-warning); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(180deg, $color-warning, $color-warning); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(180deg, $color-warning, $color-warning); /* Firefox 3.6 - 15 */
+    background: linear-gradient(180deg, $color-warning, $color-warning); /* 标准的语法（必须放在最后） */
+  }
+  .box:nth-child(5):before{
+    background: -webkit-linear-gradient(180deg, $color-danger, $color-danger); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(180deg, $color-danger, $color-danger); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(180deg, $color-danger, $color-danger); /* Firefox 3.6 - 15 */
+    background: linear-gradient(180deg, $color-danger, $color-danger); /* 标准的语法（必须放在最后） */
+  }
+
+  .box:hover{
+    .content{
+      h2{
+        transform: translateY(-140px);
+      }
+      a{
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      a:hover{
+        color: #000;
+        background: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+export default [
+  {
+    tag: "el-table-column",
+    label: "通道代码",
+    prop: "number",
+    width: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "通道名称",
+    prop: "name",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "IP地址",
+    prop: "ip",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "端口号",
+    prop: "port",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "数据库名称",
+    prop: "databaseName",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "数据库类型",
+    prop: "databaseType",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "Select",
+    options: [
+      {
+        label: "mysql",
+        value: "0",
+        authority: {
+          idLoad: false,
+          idIf: true,
+          idDisable: false,
+          idShow: true,
+        },
+      },
+      {
+        label: "oracle",
+        value: "1",
+        authority: {
+          idLoad: false,
+          idIf: true,
+          idDisable: false,
+          idShow: true,
+        },
+      },
+      {
+        label: "sqlserver",
+        value: "2",
+        authority: {
+          idLoad: false,
+          idIf: true,
+          idDisable: false,
+          idShow: true,
+        },
+      }
+    ],
+  },
+  {
+    tag: "el-table-column",
+    label: "数据库帐号",
+    prop: "databaseAccount",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "备注信息",
+    prop: "mark",
+    minWidth: 240,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "创建时间",
+    prop: "createTime",
+    minWidth: 240,
+    showOverflowTooltip: true,
+    comp: "Datetime",
+  },
+  {
+    tag: "el-table-column",
+    label: "修改时间",
+    prop: "updateTime",
+    minWidth: 240,
+    resizable: false,
+    showOverflowTooltip: true,
+    comp: "Datetime",
+  },
+];
+
+

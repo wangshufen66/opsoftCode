@@ -1,0 +1,28 @@
+.desgin-header {
+  height: 68px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  box-shadow: 0 1px 1px #eee;
+  border-bottom: 1px solid #eee;
+  .left-wrap {
+    padding: 0 30px;
+    color: rgba(72, 154, 241, 1);
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 40px;
+  }
+  .center-wrap{
+    display: flex;
+  }
+  .right-wrap {
+    padding: 0 10px;
+    justify-self: right;
+  }
+  .el-button-group {
+    margin-left: 10px;
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}

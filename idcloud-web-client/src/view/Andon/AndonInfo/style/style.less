@@ -1,0 +1,50 @@
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.4rem;
+}
+
+::v-deep {
+  .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+    background-color: #1890ff;
+    border-radius: 5px 5px 0 0;
+    color: white;
+  }
+
+  .el-tabs--card>.el-tabs__header .el-tabs__nav {
+    border: none;
+  }
+
+  .el-tabs__nav-wrap .is-top {
+    border-bottom: none;
+    border-left: none;
+    transition: 0ms;
+  }
+
+  .el-tabs__header {
+    border-bottom: 1px solid #1890ff;
+  }
+
+  .el-tabs__item:hover {
+    color: #4f4f4f;
+  }
+}
+
+.form-container {
+  .form-head {
+    margin: 16px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font-size: 24px;
+      font-family: PingFangSC, PingFangSC-Medium;
+      font-weight: 500;
+      color: #4f4f4f;
+    }
+
+    .button-wrapper {
+      line-height: 36px;
+    }
+  }
+}

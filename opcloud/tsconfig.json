@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "jsx": "preserve",
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/plugins/*": ["src/plugins/*"],
+      "@/views/*": ["src/views/*"],
+      "@/router/*": ["src/router/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/config/*": ["src/config/*"],
+      "@/layout/*": ["src/layout/*"],
+      "@/components/*": ["src/components/*"],
+      "@/api/*": ["src/api/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/shared/*": ["src/shared/*"],
+      "@/directives/*": ["src/directives/*"]
+    },
+    "types": ["node", "./src/types", "element-plus/global"],
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "src/**/*",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.js",
+    "./src/**/*.vue",
+    "public/js/jq-3.31.js"
+  ],
+  "exclude": ["node_modules", "dist"]
+}

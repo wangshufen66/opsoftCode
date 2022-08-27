@@ -1,0 +1,246 @@
+.table-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+  margin-bottom: 12px;
+
+  .table-header-left-wrapper {
+    ::v-deep {
+      .ivu-dropdown-item {
+        padding: 0 0;
+      }
+    }
+
+    .el-btn-style {
+      color: #1890ff;
+    }
+
+    .el-btn-style-single {
+      color: #1890ff;
+      border: 1px solid #1890ff;
+    }
+
+    .option-button-container {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: left;
+      margin-bottom: 0.2rem;
+
+      .el-btn-group-style {
+        display: flex;
+        height: 32px;
+        flex-wrap: nowrap;
+        margin-left: 6px;
+
+        ::v-deep {
+          .el-button:nth-of-type(1) {
+            border: 1px solid #1890ff;
+            border-right: 1px solid transparent;
+          }
+
+          .el-button:nth-of-type(2) {
+            border: 1px solid #1890ff;
+            border-left: 1px solid transparent;
+          }
+
+          .el-button:nth-of-type(2)::before {
+            content: "";
+            z-index: 2;
+            position: absolute;
+            width: 1px;
+            height: 16px;
+            top: 25%;
+            left: -1px;
+            bottom: 0;
+            background-color: #1890ff;
+          }
+        }
+
+
+      }
+
+      .option-dropdown {
+        ::v-deep {
+          .el-button {
+            padding: 0 2px 0 10px;
+            border: 1px solid #1890ff;
+          }
+        }
+
+        .option-button {
+          height: 32px;
+
+          * {
+            color: #1890ff;
+            margin: 0 2px;
+          }
+
+          i:nth-child(1) {
+            font-size: 18px;
+          }
+
+          span {
+            font-size: 12px;
+          }
+        }
+
+        .dropdown-line-wrapper {
+          .dropdown-line {
+            line-height: 28px;
+            height: 28px;
+            text-align: center;
+            color: #1890ff;
+            text-align: center;
+          }
+        }
+      }
+
+      .show-all {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 32px;
+        line-height: 32px;
+        margin: 0 0 0 8px;
+
+        span {
+          margin-left: 8px;
+        }
+      }
+
+      .header-icon-wrapper::before {
+        content: "";
+        z-index: 2;
+        position: absolute;
+        width: 1px;
+        height: 16px;
+        top: 25%;
+        right: 107px;
+        background-color: #dcdfe6;
+      }
+
+      .header-icon-wrapper {
+        white-space: nowrap;
+        cursor: pointer;
+        line-height: 32px;
+        margin-left: 12px;
+      }
+
+      .option-button {
+        margin-left: 4px;
+        // margin-bottom: 0.2rem;
+        height: 32px;
+      }
+
+      .option-excel-export {
+        margin-left: 0.2rem;
+        width: 4.6rem;
+        padding-left: 0.6rem;
+      }
+
+      /*input 标签 type="file" 时的样式*/
+
+      .option-excel-import {
+        margin-left: 0.2rem;
+        /*position: relative;*/
+        display: inline-block;
+        background: #409eff;
+        border: 1px none #99d3f5;
+        border-radius: 4px;
+        padding: 1px 12px 5px 5px;
+        overflow: hidden;
+        color: #fff;
+        text-decoration: none;
+        text-indent: 0;
+        line-height: 20px;
+
+        span {
+          position: relative;
+          color: #fff;
+          top: 0.29rem;
+          left: 0.2rem;
+        }
+
+        input {
+          position: absolute;
+          font-size: 0.1rem;
+          z-index: 9;
+          height: 2rem;
+          width: 4.4rem;
+          left: 9.4rem;
+          top: 0;
+          opacity: 0;
+        }
+      }
+
+      .option-excel-import:hover {
+        background: #66b1ff;
+        border-color: #78c3f3;
+        color: #004974;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .table-header-right-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    /*flex-direction: row;*/
+    /*justify-content: flex-end;*/
+
+    .option-input {
+      margin-left: 2px;
+    }
+
+    .options-search-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: right;
+      width: 460px;
+      // margin-bottom: 0.2rem;
+      position: relative;
+      right: 1rem;
+
+      .option-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        // margin: 0.1rem 0;
+      }
+    }
+
+    .import-export-wrapper {
+      ::v-deep {
+        .el-button {
+          border: 1px solid #1890ff;
+        }
+
+        .el-button--mini,
+        .el-button--mini.is-round {
+          padding: 2px 1px;
+        }
+      }
+
+      .option-button {
+        width: 4.8rem;
+        height: 32px;
+
+        * {
+          color: #1890ff;
+          margin: 0 2px;
+        }
+
+        i:nth-child(1) {
+          font-size: 18px;
+        }
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

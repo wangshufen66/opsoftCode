@@ -1,0 +1,136 @@
+<!-- 组件属性配置 -->
+<template>
+  <el-form :model="formModel" :rules="formRules" ref="formRef" label-width="110px" size="small">
+    <el-form-item label="字段名">
+      <el-input v-model="componentCfg.__vModel__" placeholder="请输入字段名" clearable :disabled="componentCfg.__runtime__?.fieldDisabled">
+        <template #append>
+          <el-button title="设置外键" icon="el-icon-s-unfold" @click.stop="onSetFielClick"></el-button>
+        </template>
+      </el-input>
+    </el-form-item>
+    <el-form-item label="标题">
+      <el-input v-model="componentCfg.__form__.label" placeholder="设置标题" clearable></el-input>
+    </el-form-item>
+    <el-form-item label="占位文本">
+      <el-input v-model="componentCfg.__attr__.placeholder" placeholder="设置占位文本" clearable></el-input>
+    </el-form-item>
+    <el-form-item label="栅格">
+      <el-slider v-model="componentCfg.__form__.span" :max="24" :min="1" :marks="{ 6: '', 12: '', 18: '' }" />
+    </el-form-item>
+    <el-form-item label="分隔符">
+      <el-input v-model="componentCfg.__attr__.separator" placeholder="设置占分隔符" clearable></el-input>
+    </el-form-item>
+    <el-form-item>
+      <template #label>
+        自定义节点
+        <el-tooltip placement="bottom">
+          <template #content>
+            自定义表达式:
+            <br />
+            格式:{有效数据属性}
+            <br />
+            如：--{label}--
+          </template>
+          <i class="header-icon el-icon-info"></i>
+        </el-tooltip>
+      </template>
+      <el-input v-model="componentCfg.__customExpression__" placeholder="设置自定义节点表达式" clearable></el-input>
+    </el-form-item>
+    <div class="switch-wrap">
+      <el-col :span="12">
+        <el-form-item label="显示标题">
+          <el-switch v-model="componentCfg.__form__.showLabel" />
+        </el-form-item>
+      </el-col>
+      <el-col :span="12">
+        <el-form-item label="是否必填">
+          <el-switch v-model="componentCfg.__form__.required" />
+        </el-form-item>
+      </el-col>
+      <el-col :span="12">
+        <el-form-item label="是否可清空">
+          <el-switch v-model="componentCfg.__attr__.clearable" />
+        </el-form-item>
+      </el-col>
+      <el-col :span="12">
+        <el-form-item label="搜索选项">
+          <el-switch v-model="componentCfg.__attr__.filterable" />
+        </el-form-item>
+      </el-col>
+      <el-col :span="12">
+        <el-form-item label="显示完整路径">
+          <el-switch v-model="componentCfg.__attr__['show-all-levels']" />
+        </el-form-item>
+      </el-col>
+      <el-col :span="12">
+        <el-form-item label="是否禁用">
+          <el-switch v-model="componentCfg.__attr__.disabled" />
+        </el-form-item>
+      </el-col>
+      <el-col :span="12">
+        <el-form-item label="搜索条件">
+          <el-switch v-model="componentCfg.__config__.inSearch" />
+        </el-form-item>
+      </el-col>
+      <el-col :span="12">
+        <el-form-item label="表格展示">
+          <el-switch v-model="componentCfg.__config__.inTable" />
+        </el-form-item>
+      </el-col>
+      <el-col :span="12">
+        <el-form-item label="表格排序">
+          <el-switch v-model="componentCfg.__config__.tableSort" />
+        </el-form-item>
+      </el-col>
+      <el-col :span="12">
+        <el-form-item label="表单展示">
+          <el-switch v-model="componentCfg.__config__.inForm" />
+        </el-form-item>
+      </el-col>
+      <el-col :span="12">
+        <el-form-item label="唯一性">
+          <el-switch v-model="componentCfg.__config__.unique" />
+        </el-form-item>
+      </el-col>
+    </div>
+
+    <property-mobile-config :componentCfg="componentCfg"></property-mobile-config>
+    <property-regex :componentCfg="componentCfg"></property-regex>
+    <property-penetrate :componentCfg="componentCfg"></property-penetrate>
+  </el-form>
+</template>
+
+<script lang="ts">
+import { reactive, ref } from "vue";
+import useEitter from "@/hooks/use-core/useMitt";
+
+export default {
+  name: "CascaderProperty",
+  props: {
+    componentCfg: Object,
+  },
+  setup(props, { emit }) {
+    const activeName = ref<string>("0");
+
+    const formModel = reactive({});
+
+    const formRules = reactive({});
+
+    const { emitter } = useEitter();
+
+    function onSetFielClick() {
+      emitter.emit("on-property-reltable");
+    }
+
+    return {
+      activeName,
+      formModel,
+      formRules,
+      onSetFielClick,
+    };
+  },
+};
+</script>
+
+<style>
+</style>

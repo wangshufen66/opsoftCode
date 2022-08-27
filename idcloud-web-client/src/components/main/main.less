@@ -1,0 +1,138 @@
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+
+  .el-aside{
+    background-color: #515a6e;
+    transition: all 0.2s ease-in-out;
+
+    /deep/ ::-webkit-scrollbar {
+      display: none !important;
+    }
+  }
+
+  .drawer-bg {
+    background: #000;
+    opacity: 0.3;
+    width: 100vw;
+    top: 0;
+    height: 100vh;
+    position: absolute;
+    z-index: 2000;
+  }
+
+  .logo-con {
+    height: 54px;
+    padding: 10px;
+    position: relative;
+
+    img {
+      height: 44px;
+      //width: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .header-con {
+    padding: 0 20px;
+    .header-bar{
+      /deep/ .el-autocomplete{
+        width: 220px;
+      }
+      /deep/ .margin-left-20{
+        margin-left: 20px
+      }
+
+    }
+  }
+
+  .main-content-con {
+    padding: 0;
+  }
+
+  .main-layout-con {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tag-nav-wrapper {
+    height: 36px !important;
+    padding: 0;
+  }
+
+  .content-wrapper {
+    padding: 0 16px 0 28px;
+    height: calc(~"100vh - 100px");
+    overflow: auto;
+
+    .el-backtop:hover {
+      background-color: rgba(0, 0, 0, .7) !important;
+    }
+    .el-backtop{
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 2px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease-in-out;
+      width: 50px;
+      height: 45px;
+      i{
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
+//针对手机的适配
+//自适应屏幕尝试 =》针对首页  从宽度1100开始适配
+//<=1100的设备
+@media (max-width: 1250px) {
+  .header-con {
+    .full-screen-btn-con {
+      display: none;
+    }
+
+    .el-autocomplete {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header-con {
+    /deep/ .custom-bread-crumb {
+      display: none !important;
+    }
+  }
+  /deep/.el-aside{
+    position: fixed !important;
+    z-index: 3000;
+    height: 100%;
+    .collased-menu-dropdown{
+      display: none;
+    }
+  }
+}
+
+
+
+//针对ivew的table样式修复
+//全局样式1  修改table统一样式
+//后期 无 ivew组件即可去除
+/deep/ .ivu-table-column-left{
+  text-align: center;
+  .ivu-table-cell{
+    padding-left:0;
+    padding-right:0;
+  }
+}
+/deep/.ivu-table-column-center{
+  text-align: center;
+  .ivu-table-cell{
+    padding-left:0;
+    padding-right:0;
+  }
+}
+

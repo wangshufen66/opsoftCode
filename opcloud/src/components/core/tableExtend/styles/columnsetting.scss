@@ -1,0 +1,36 @@
+.title {
+  color: #f56c6c;
+  margin-bottom: 20px;
+}
+.column-list {
+  display: flex;
+  flex-direction: column;
+  .column-item-wrap {
+    display: flex;
+    align-items: center;
+  }
+  .column-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    &:nth-child(2) {
+      width: 150px;
+    }
+    & > label {
+      margin-right: 8px;
+    }
+    .search {
+      width: 100px;
+    }
+  }
+}
+.check-item {
+  padding: 8px 10px;
+  border-bottom: 1px solid #f7f7f7 !important;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.check-all {
+  padding: 8px 10px;
+}

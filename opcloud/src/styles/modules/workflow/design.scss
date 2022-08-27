@@ -1,0 +1,29 @@
+.flow-design{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+}
+.header {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .el-button {
+    margin-left: 10px;
+  }
+}
+.bpmn-container {
+  background-color: #f7f7f7;
+  display: flex;
+  flex: 1;
+}
+
+.bpmn-canvas {
+  flex: 1 0 0;
+}
+
+.bpmn-js-properties-panel {
+  width: 300px;
+  height: 100%;
+  overflow-y: auto;
+}

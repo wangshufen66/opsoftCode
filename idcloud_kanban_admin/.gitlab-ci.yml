@@ -1,0 +1,25 @@
+stages:
+  - build
+# 在docker的gitlab-runner容器中构建
+jobdockerbuildpub:
+  only:
+    - mic_pub
+  stage: build
+  script:
+    - pwd
+    - sudo node -v
+    - sudo npm --version
+    - sudo npm install
+    - sudo npm run build:dep
+    - sudo rm -rf /usr/local/tomcat/apache-tomcat-9.0.24/webapps/kanban
+    - sudo cp -r dist /usr/local/tomcat/apache-tomcat-9.0.24/webapps/kanban
+    - sudo rm -rf /usr/local/tomcat/apache-tomcat-9.0.24/webapps/ROOT/static
+    - sudo rm -rf /usr/local/tomcat/apache-tomcat-9.0.24/webapps/ROOT/static/images
+    - sudo mkdir /usr/local/tomcat/apache-tomcat-9.0.24/webapps/ROOT/static
+    - sudo mkdir /usr/local/tomcat/apache-tomcat-9.0.24/webapps/ROOT/static/images
+    - sudo cp -r /usr/local/tomcat/apache-tomcat-9.0.24/webapps/kanban/static/images/* /usr/local/tomcat/apache-tomcat-9.0.24/webapps/ROOT/static/images/
+    - pwd
+    - sudo service tomcat stop
+    - sudo service tomcat start
+  tags:
+    - idckb_runner

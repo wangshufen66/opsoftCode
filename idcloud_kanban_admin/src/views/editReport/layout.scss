@@ -1,0 +1,132 @@
+@import '../../components/CustomReport/css/variable.scss';
+@import '../../assets/ali-icon/iconfont.css';
+
+.drag-report-main-container {
+  @include ps-r;
+  .drag-report-title {
+    @include default-flex;
+    width: 1000px;
+    margin: 0 auto;
+    height: 80px;
+    font-size: 3rem;
+  }
+  .drag-report-container {
+    //width: 1200px;
+    //margin: 0 auto;
+    width: 100%;
+    margin: 2px 10px;
+    .layout-row-box {
+      @include default-flex;
+      @include ps-r;
+      flex-wrap: nowrap;
+      //margin: 2rem 0;
+      margin: 0rem 0;
+      .row-controller-bar {
+        @include cur-all;
+        @include controller-bar;
+        top: -20px;
+        .row-controller-bar-title-box {
+          @include fl;
+          @include title-margin;
+          @include ellipsis;
+          max-width: 20%;
+        }
+        .controller-bar-right-box {
+          @include fr;
+          .align-type-item {
+            @include cur-p;
+            @include title-margin;
+            display: inline-block;
+            &.active {
+              color: $success-color;
+            }
+          }
+          .remove-item {
+            color: $danger-color;
+          }
+        }
+      }
+      .layout-col-box {
+        @include default-flex;
+        @include default-background-img;
+        @include ps-r;
+        @include default-col-style;
+        @include default-col-layout;
+        .col-controller-bar {
+          @include controller-bar;
+          top: 0;
+          .col-controller-bar-title-box {
+            @include fr;
+            @include cur-p;
+            @include title-margin;
+            @include ellipsis;
+            max-width: 35%;
+            &.remove-item {
+              color: $danger-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .drag-report-add-box {
+    @include default-flex;
+    @include side-controller-box;
+    background-color: $defaultControllerBoxBackground;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-flow: column;
+    .title-box {
+      @include controller-bar;
+      top: 0;
+      background-color: transparent;
+      @include btn-icon;
+      .el-icon-close {
+        @include cur-p;
+      }
+    }
+  }
+
+  .drag-report-add-row-box {
+    @include boxShadow;
+    left: 0;
+    .title-box {
+      text-align: right;
+      right: 0;
+    }
+  }
+  .drag-report-add-col-box {
+    @include boxShadowReversal;
+    right: 0;
+    .title-box {
+      text-align: left;
+      left: 0;
+    }
+  }
+
+  .ps-icon-btn {
+    @include cur-p;
+    @include ps-a;
+    @include btn-icon;
+    z-index: 9;
+    top: 0;
+    transition: all 0.5s;
+    font-size: 2.5rem;
+    &.add-row-icon {
+      left: 5%;
+      &:hover {
+        animation: transIcon 1s infinite;
+      }
+    }
+    &.add-col-icon {
+      right: 5%;
+      &:hover {
+        animation: transIconReversal 1s infinite;
+      }
+    }
+    &.preview-icon {
+      right: 5%;
+    }
+  }
+}

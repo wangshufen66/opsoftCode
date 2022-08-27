@@ -1,0 +1,116 @@
+.workflow-manage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topsearch {
+  height: 68px;
+  display: flex;
+  padding: 10px;
+}
+
+.modelList {
+  // flex: 1;
+  height: calc(100% - 68px);
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+}
+
+.contentlist {
+  width: 100%;
+  overflow: auto;
+  .workflow-content {
+    // margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .workflow-item {
+    width: 360px;
+    height: 280px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 15px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 1px rgb(187 187 187 / 100%);
+    overflow: hidden;
+  }
+  .loading-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.workflow-item {
+  .item-version {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  .item-previewpic {
+    width: 80%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .previewpic {
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+  }
+  .item-btn {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    cursor: pointer;
+  }
+  .item-btn-del {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+  }
+  .item-info {
+    font-size: 16px;
+    line-height: 30px;
+    width: 100%;
+    height: 12%;
+    padding-left: 10px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    &:hover {
+      transition: 0.5s;
+      height: 40%;
+    }
+    .info-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.upload-desc {
+  text-align: center;
+}
+
+.open-model-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.drag-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.el-upload-dragger {
+  line-height: 180px;
+}

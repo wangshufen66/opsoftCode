@@ -1,0 +1,25 @@
+
+.id-form {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+
+  /deep/ .el-form-item__content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /deep/ .id-component {
+    flex-grow: 1;
+  }
+
+  //特殊情况处理 消除el-checkbox自带的label
+  /deep/ .el-form-item__content > .el-checkbox {
+    .el-checkbox__label {
+      display: none;
+    }
+  }
+}
+
+
+

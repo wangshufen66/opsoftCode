@@ -1,0 +1,48 @@
+
+.id-form {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 33%);
+
+  /deep/ .el-form-item__content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .id-component {
+    flex-grow: 1;
+  }
+
+  //特殊情况处理 消除el-checkbox自带的label
+  /deep/ .id-el-form-item {
+    .id-component{
+      .el-checkbox__label {
+        display: none;
+      }
+    }
+  }
+}
+// 对不同尺寸的屏幕设定不同的布局，实现多屏自适应
+@media screen and (max-width: 1500px) {
+  .id-form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 33%);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .id-form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .id-form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+  }
+}

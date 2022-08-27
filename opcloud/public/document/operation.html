@@ -1,0 +1,1743 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <title>第一章 系统登陆</title>
+  <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext'
+    rel='stylesheet' type='text/css' />
+  <style type='text/css'>
+    html {
+      overflow-x: initial !important;
+    }
+
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #333333;
+      --select-text-bg-color: #B5D6FC;
+      --select-text-font-color: auto;
+      --monospace: "Lucida Console", Consolas, "Courier", monospace;
+    }
+
+    html {
+      font-size: 14px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      margin: 0px;
+      padding: 0px;
+      height: auto;
+      bottom: 0px;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      font-size: 1rem;
+      line-height: 1.42857;
+      overflow-x: hidden;
+      background: inherit;
+      tab-size: 4;
+    }
+
+    iframe {
+      margin: auto;
+    }
+
+    a.url {
+      word-break: break-all;
+    }
+
+    a:active,
+    a:hover {
+      outline: 0px;
+    }
+
+    .in-text-selection,
+    ::selection {
+      text-shadow: none;
+      background: var(--select-text-bg-color);
+      color: var(--select-text-font-color);
+    }
+
+    #write {
+      margin: 0px auto;
+      height: auto;
+      width: inherit;
+      word-break: normal;
+      word-wrap: break-word;
+      position: relative;
+      white-space: normal;
+      overflow-x: visible;
+      padding-top: 40px;
+    }
+
+    #write.first-line-indent p {
+      text-indent: 2em;
+    }
+
+    #write.first-line-indent li p,
+    #write.first-line-indent p * {
+      text-indent: 0px;
+    }
+
+    #write.first-line-indent li {
+      margin-left: 2em;
+    }
+
+    .for-image #write {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    body.typora-export {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .typora-export .footnote-line,
+    .typora-export li,
+    .typora-export p {
+      white-space: pre-wrap;
+    }
+
+    @media screen and (max-width: 500px) {
+      body.typora-export {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+
+      #write {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .CodeMirror-sizer {
+        margin-left: 0px !important;
+      }
+
+      .CodeMirror-gutters {
+        display: none !important;
+      }
+    }
+
+    #write li>figure:first-child {
+      margin-top: -20px;
+    }
+
+    #write ol,
+    #write ul {
+      position: relative;
+    }
+
+    img {
+      max-width: 100%;
+      vertical-align: middle;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      color: inherit;
+      font-style: inherit;
+      font-variant: inherit;
+      font-weight: inherit;
+      font-stretch: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      font-family: inherit;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      line-height: normal;
+      padding: 0px;
+    }
+
+    *,
+    ::after,
+    ::before {
+      box-sizing: border-box;
+    }
+
+    #write h1,
+    #write h2,
+    #write h3,
+    #write h4,
+    #write h5,
+    #write h6,
+    #write p,
+    #write pre {
+      width: inherit;
+    }
+
+    #write h1,
+    #write h2,
+    #write h3,
+    #write h4,
+    #write h5,
+    #write h6,
+    #write p {
+      position: relative;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      break-after: avoid-page;
+      break-inside: avoid;
+      orphans: 2;
+    }
+
+    p {
+      orphans: 4;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    h4 {
+      font-size: 1.4rem;
+    }
+
+    h5 {
+      font-size: 1.2rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+    }
+
+    .md-math-block,
+    .md-rawblock,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .md-blockmeta {
+      color: rgb(204, 204, 204);
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    a {
+      cursor: pointer;
+    }
+
+    sup.md-footnote {
+      padding: 2px 4px;
+      background-color: rgba(238, 238, 238, 0.7);
+      color: rgb(85, 85, 85);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    sup.md-footnote a,
+    sup.md-footnote a:hover {
+      color: inherit;
+      text-transform: inherit;
+      text-decoration: inherit;
+    }
+
+    #write input[type="checkbox"] {
+      cursor: pointer;
+      width: inherit;
+      height: inherit;
+    }
+
+    figure {
+      overflow-x: auto;
+      margin: 1.2em 0px;
+      max-width: calc(100% + 16px);
+      padding: 0px;
+    }
+
+    figure>table {
+      margin: 0px !important;
+    }
+
+    tr {
+      break-inside: avoid;
+      break-after: auto;
+    }
+
+    thead {
+      display: table-header-group;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0px;
+      width: 100%;
+      overflow: auto;
+      break-inside: auto;
+      text-align: left;
+    }
+
+    table.md-table td {
+      min-width: 32px;
+    }
+
+    .CodeMirror-gutters {
+      border-right: 0px;
+      background-color: inherit;
+    }
+
+    .CodeMirror-linenumber {
+      user-select: none;
+    }
+
+    .CodeMirror {
+      text-align: left;
+    }
+
+    .CodeMirror-placeholder {
+      opacity: 0.3;
+    }
+
+    .CodeMirror pre {
+      padding: 0px 4px;
+    }
+
+    .CodeMirror-lines {
+      padding: 0px;
+    }
+
+    div.hr:focus {
+      cursor: none;
+    }
+
+    #write pre {
+      white-space: pre-wrap;
+    }
+
+    #write.fences-no-line-wrapping pre {
+      white-space: pre;
+    }
+
+    #write pre.ty-contain-cm {
+      white-space: normal;
+    }
+
+    .CodeMirror-gutters {
+      margin-right: 4px;
+    }
+
+    .md-fences {
+      font-size: 0.9rem;
+      display: block;
+      break-inside: avoid;
+      text-align: left;
+      overflow: visible;
+      white-space: pre;
+      background: inherit;
+      position: relative !important;
+    }
+
+    .md-diagram-panel {
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+      padding-top: 0px;
+      padding-bottom: 8px;
+      overflow-x: auto;
+    }
+
+    #write .md-fences.mock-cm {
+      white-space: pre-wrap;
+    }
+
+    .md-fences.md-fences-with-lineno {
+      padding-left: 0px;
+    }
+
+    #write.fences-no-line-wrapping .md-fences.mock-cm {
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .md-fences.mock-cm.md-fences-with-lineno {
+      padding-left: 8px;
+    }
+
+    .CodeMirror-line,
+    twitterwidget {
+      break-inside: avoid;
+    }
+
+    .footnotes {
+      opacity: 0.8;
+      font-size: 0.9rem;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    .footnotes+.footnotes {
+      margin-top: 0px;
+    }
+
+    .md-reset {
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+      outline: 0px;
+      vertical-align: top;
+      background: 0px 0px;
+      text-decoration: none;
+      text-shadow: none;
+      float: none;
+      position: static;
+      width: auto;
+      height: auto;
+      white-space: nowrap;
+      cursor: inherit;
+      -webkit-tap-highlight-color: transparent;
+      line-height: normal;
+      font-weight: 400;
+      text-align: left;
+      box-sizing: content-box;
+      direction: ltr;
+    }
+
+    li div {
+      padding-top: 0px;
+    }
+
+    blockquote {
+      margin: 1rem 0px;
+    }
+
+    li .mathjax-block,
+    li p {
+      margin: 0.5rem 0px;
+    }
+
+    li {
+      margin: 0px;
+      position: relative;
+    }
+
+    blockquote> :last-child {
+      margin-bottom: 0px;
+    }
+
+    blockquote> :first-child,
+    li> :first-child {
+      margin-top: 0px;
+    }
+
+    .footnotes-area {
+      color: rgb(136, 136, 136);
+      margin-top: 0.714rem;
+      padding-bottom: 0.143rem;
+      white-space: normal;
+    }
+
+    #write .footnote-line {
+      white-space: pre-wrap;
+    }
+
+    @media print {
+
+      body,
+      html {
+        border: 1px solid transparent;
+        height: 99%;
+        break-after: avoid;
+        break-before: avoid;
+      }
+
+      #write {
+        margin-top: 0px;
+        padding-top: 0px;
+        border-color: transparent !important;
+      }
+
+      .typora-export * {
+        -webkit-print-color-adjust: exact;
+      }
+
+      html.blink-to-pdf {
+        font-size: 13px;
+      }
+
+      .typora-export #write {
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 0px;
+        break-after: avoid;
+      }
+
+      .typora-export #write::after {
+        height: 0px;
+      }
+
+      @page {
+        margin: 20mm 0px;
+      }
+    }
+
+    .footnote-line {
+      margin-top: 0.714em;
+      font-size: 0.7em;
+    }
+
+    a img,
+    img a {
+      cursor: pointer;
+    }
+
+    pre.md-meta-block {
+      font-size: 0.8rem;
+      min-height: 0.8rem;
+      white-space: pre-wrap;
+      background: rgb(204, 204, 204);
+      display: block;
+      overflow-x: hidden;
+    }
+
+    p>.md-image:only-child:not(.md-img-error) img,
+    p>img:only-child {
+      display: block;
+      margin: auto;
+    }
+
+    p>.md-image:only-child {
+      display: inline-block;
+      width: 100%;
+    }
+
+    #write .MathJax_Display {
+      margin: 0.8em 0px 0px;
+    }
+
+    .md-math-block {
+      width: 100%;
+    }
+
+    .md-math-block:not(:empty)::after {
+      display: none;
+    }
+
+    [contenteditable="true"]:active,
+    [contenteditable="true"]:focus {
+      outline: 0px;
+      box-shadow: none;
+    }
+
+    .md-task-list-item {
+      position: relative;
+      list-style-type: none;
+    }
+
+    .task-list-item.md-task-list-item {
+      padding-left: 0px;
+    }
+
+    .md-task-list-item>input {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      margin-left: -1.2em;
+      margin-top: calc(1em - 10px);
+      border: none;
+    }
+
+    .math {
+      font-size: 1rem;
+    }
+
+    .md-toc {
+      min-height: 3.58rem;
+      position: relative;
+      font-size: 0.9rem;
+      border-radius: 10px;
+    }
+
+    .md-toc-content {
+      position: relative;
+      margin-left: 0px;
+    }
+
+    .md-toc-content::after,
+    .md-toc::after {
+      display: none;
+    }
+
+    .md-toc-item {
+      display: block;
+      color: rgb(65, 131, 196);
+    }
+
+    .md-toc-item a {
+      text-decoration: none;
+    }
+
+    .md-toc-inner:hover {
+      text-decoration: underline;
+    }
+
+    .md-toc-inner {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .md-toc-h1 .md-toc-inner {
+      margin-left: 0px;
+      font-weight: 700;
+    }
+
+    .md-toc-h2 .md-toc-inner {
+      margin-left: 2em;
+    }
+
+    .md-toc-h3 .md-toc-inner {
+      margin-left: 4em;
+    }
+
+    .md-toc-h4 .md-toc-inner {
+      margin-left: 6em;
+    }
+
+    .md-toc-h5 .md-toc-inner {
+      margin-left: 8em;
+    }
+
+    .md-toc-h6 .md-toc-inner {
+      margin-left: 10em;
+    }
+
+    @media screen and (max-width: 48em) {
+      .md-toc-h3 .md-toc-inner {
+        margin-left: 3.5em;
+      }
+
+      .md-toc-h4 .md-toc-inner {
+        margin-left: 5em;
+      }
+
+      .md-toc-h5 .md-toc-inner {
+        margin-left: 6.5em;
+      }
+
+      .md-toc-h6 .md-toc-inner {
+        margin-left: 8em;
+      }
+    }
+
+    a.md-toc-inner {
+      font-size: inherit;
+      font-style: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
+
+    .footnote-line a:not(.reversefootnote) {
+      color: inherit;
+    }
+
+    .md-attr {
+      display: none;
+    }
+
+    .md-fn-count::after {
+      content: ".";
+    }
+
+    code,
+    pre,
+    samp,
+    tt {
+      font-family: var(--monospace);
+    }
+
+    kbd {
+      margin: 0px 0.1em;
+      padding: 0.1em 0.6em;
+      font-size: 0.8em;
+      color: rgb(36, 39, 41);
+      background: rgb(255, 255, 255);
+      border: 1px solid rgb(173, 179, 185);
+      border-radius: 3px;
+      box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset;
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+
+    .md-comment {
+      color: rgb(162, 127, 3);
+      opacity: 0.8;
+      font-family: var(--monospace);
+    }
+
+    code {
+      text-align: left;
+      vertical-align: initial;
+    }
+
+    a.md-print-anchor {
+      white-space: pre !important;
+      border-width: initial !important;
+      border-style: none !important;
+      border-color: initial !important;
+      display: inline-block !important;
+      position: absolute !important;
+      width: 1px !important;
+      right: 0px !important;
+      outline: 0px !important;
+      background: 0px 0px !important;
+      text-decoration: initial !important;
+      text-shadow: initial !important;
+    }
+
+    .md-inline-math .MathJax_SVG .noError {
+      display: none !important;
+    }
+
+    .html-for-mac .inline-math-svg .MathJax_SVG {
+      vertical-align: 0.2px;
+    }
+
+    .md-math-block .MathJax_SVG_Display {
+      text-align: center;
+      margin: 0px;
+      position: relative;
+      text-indent: 0px;
+      max-width: none;
+      max-height: none;
+      min-height: 0px;
+      min-width: 100%;
+      width: auto;
+      overflow-y: hidden;
+      display: block !important;
+    }
+
+    .MathJax_SVG_Display,
+    .md-inline-math .MathJax_SVG_Display {
+      width: auto;
+      margin: inherit;
+      display: inline-block !important;
+    }
+
+    .MathJax_SVG .MJX-monospace {
+      font-family: var(--monospace);
+    }
+
+    .MathJax_SVG .MJX-sans-serif {
+      font-family: sans-serif;
+    }
+
+    .MathJax_SVG {
+      display: inline;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      zoom: 90%;
+      text-indent: 0px;
+      text-align: left;
+      text-transform: none;
+      letter-spacing: normal;
+      word-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      float: none;
+      direction: ltr;
+      max-width: none;
+      max-height: none;
+      min-width: 0px;
+      min-height: 0px;
+      border: 0px;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .MathJax_SVG * {
+      transition: none;
+    }
+
+    .MathJax_SVG_Display svg {
+      vertical-align: middle !important;
+      margin-bottom: 0px !important;
+    }
+
+    .os-windows.monocolor-emoji .md-emoji {
+      font-family: "Segoe UI Symbol", sans-serif;
+    }
+
+    .md-diagram-panel>svg {
+      max-width: 100%;
+    }
+
+    [lang="mermaid"] svg,
+    [lang="flow"] svg {
+      max-width: 100%;
+    }
+
+    [lang="mermaid"] .node text {
+      font-size: 1rem;
+    }
+
+    table tr th {
+      border-bottom: 0px;
+    }
+
+    video {
+      max-width: 100%;
+      display: block;
+      margin: 0px auto;
+    }
+
+    iframe {
+      max-width: 100%;
+      width: 100%;
+      border: none;
+    }
+
+    .highlight td,
+    .highlight tr {
+      border: 0px;
+    }
+
+
+    :root {
+      --side-bar-bg-color: #fafafa;
+      --control-text-color: #777;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: rgb(51, 51, 51);
+      line-height: 1.6;
+    }
+
+    #write {
+      max-width: 860px;
+      margin: 0px auto;
+      padding: 30px 30px 100px;
+    }
+
+    #write>ul:first-child,
+    #write>ol:first-child {
+      margin-top: 30px;
+    }
+
+    a {
+      color: rgb(65, 131, 196);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      position: relative;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      line-height: 1.4;
+      cursor: text;
+    }
+
+    h1:hover a.anchor,
+    h2:hover a.anchor,
+    h3:hover a.anchor,
+    h4:hover a.anchor,
+    h5:hover a.anchor,
+    h6:hover a.anchor {
+      text-decoration: none;
+    }
+
+    h1 tt,
+    h1 code {
+      font-size: inherit;
+    }
+
+    h2 tt,
+    h2 code {
+      font-size: inherit;
+    }
+
+    h3 tt,
+    h3 code {
+      font-size: inherit;
+    }
+
+    h4 tt,
+    h4 code {
+      font-size: inherit;
+    }
+
+    h5 tt,
+    h5 code {
+      font-size: inherit;
+    }
+
+    h6 tt,
+    h6 code {
+      font-size: inherit;
+    }
+
+    h1 {
+      padding-bottom: 0.3em;
+      font-size: 2.25em;
+      line-height: 1.2;
+      border-bottom: 1px solid rgb(238, 238, 238);
+    }
+
+    h2 {
+      padding-bottom: 0.3em;
+      font-size: 1.75em;
+      line-height: 1.225;
+      border-bottom: 1px solid rgb(238, 238, 238);
+    }
+
+    h3 {
+      font-size: 1.5em;
+      line-height: 1.43;
+    }
+
+    h4 {
+      font-size: 1.25em;
+    }
+
+    h5 {
+      font-size: 1em;
+    }
+
+    h6 {
+      font-size: 1em;
+      color: rgb(119, 119, 119);
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table {
+      margin: 0.8em 0px;
+    }
+
+    li>ol,
+    li>ul {
+      margin: 0px;
+    }
+
+    hr {
+      height: 2px;
+      padding: 0px;
+      margin: 16px 0px;
+      background-color: rgb(231, 231, 231);
+      border: 0px none;
+      overflow: hidden;
+      box-sizing: content-box;
+    }
+
+    li p.first {
+      display: inline-block;
+    }
+
+    ul,
+    ol {
+      padding-left: 30px;
+    }
+
+    ul:first-child,
+    ol:first-child {
+      margin-top: 0px;
+    }
+
+    ul:last-child,
+    ol:last-child {
+      margin-bottom: 0px;
+    }
+
+    blockquote {
+      border-left: 4px solid rgb(223, 226, 229);
+      padding: 0px 15px;
+      color: rgb(119, 119, 119);
+    }
+
+    blockquote blockquote {
+      padding-right: 0px;
+    }
+
+    table {
+      padding: 0px;
+      word-break: initial;
+    }
+
+    table tr {
+      border-top: 1px solid rgb(223, 226, 229);
+      margin: 0px;
+      padding: 0px;
+    }
+
+    table tr:nth-child(2n),
+    thead {
+      background-color: rgb(248, 248, 248);
+    }
+
+    table tr th {
+      font-weight: bold;
+      border-width: 1px 1px 0px;
+      border-top-style: solid;
+      border-right-style: solid;
+      border-left-style: solid;
+      border-top-color: rgb(223, 226, 229);
+      border-right-color: rgb(223, 226, 229);
+      border-left-color: rgb(223, 226, 229);
+      border-image: initial;
+      border-bottom-style: initial;
+      border-bottom-color: initial;
+      text-align: left;
+      margin: 0px;
+      padding: 6px 13px;
+    }
+
+    table tr td {
+      border: 1px solid rgb(223, 226, 229);
+      text-align: left;
+      margin: 0px;
+      padding: 6px 13px;
+    }
+
+    table tr th:first-child,
+    table tr td:first-child {
+      margin-top: 0px;
+    }
+
+    table tr th:last-child,
+    table tr td:last-child {
+      margin-bottom: 0px;
+    }
+
+    .CodeMirror-lines {
+      padding-left: 4px;
+    }
+
+    .code-tooltip {
+      box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px;
+      border-top: 1px solid rgb(238, 242, 242);
+    }
+
+    .md-fences,
+    code,
+    tt {
+      border: 1px solid rgb(231, 234, 237);
+      background-color: rgb(248, 248, 248);
+      border-radius: 3px;
+      padding: 2px 4px 0px;
+      font-size: 0.9em;
+    }
+
+    code {
+      background-color: rgb(243, 244, 244);
+      padding: 0px 2px;
+    }
+
+    .md-fences {
+      margin-bottom: 15px;
+      margin-top: 15px;
+      padding-top: 8px;
+      padding-bottom: 6px;
+    }
+
+    .md-task-list-item>input {
+      margin-left: -1.3em;
+    }
+
+    @media print {
+      html {
+        font-size: 13px;
+      }
+
+      table,
+      pre {
+        break-inside: avoid;
+      }
+
+      pre {
+        word-wrap: break-word;
+      }
+    }
+
+    .md-fences {
+      background-color: rgb(248, 248, 248);
+    }
+
+    #write pre.md-meta-block {
+      padding: 1rem;
+      font-size: 85%;
+      line-height: 1.45;
+      background-color: rgb(247, 247, 247);
+      border: 0px;
+      border-radius: 3px;
+      color: rgb(119, 119, 119);
+      margin-top: 0px !important;
+    }
+
+    .mathjax-block>.code-tooltip {
+      bottom: 0.375rem;
+    }
+
+    .md-mathjax-midline {
+      background: rgb(250, 250, 250);
+    }
+
+    #write>h3.md-focus::before {
+      left: -1.5625rem;
+      top: 0.375rem;
+    }
+
+    #write>h4.md-focus::before {
+      left: -1.5625rem;
+      top: 0.285714rem;
+    }
+
+    #write>h5.md-focus::before {
+      left: -1.5625rem;
+      top: 0.285714rem;
+    }
+
+    #write>h6.md-focus::before {
+      left: -1.5625rem;
+      top: 0.285714rem;
+    }
+
+    .md-image>.md-meta {
+      border-radius: 3px;
+      padding: 2px 0px 0px 4px;
+      font-size: 0.9em;
+      color: inherit;
+    }
+
+    .md-tag {
+      color: rgb(167, 167, 167);
+      opacity: 1;
+    }
+
+    .md-toc {
+      margin-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .sidebar-tabs {
+      border-bottom: none;
+    }
+
+    #typora-quick-open {
+      border: 1px solid rgb(221, 221, 221);
+      background-color: rgb(248, 248, 248);
+    }
+
+    #typora-quick-open-item {
+      background-color: rgb(250, 250, 250);
+      border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238);
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    .on-focus-mode blockquote {
+      border-left-color: rgba(85, 85, 85, 0.12);
+    }
+
+    header,
+    .context-menu,
+    .megamenu-content,
+    footer {
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .file-node-content:hover .file-node-icon,
+    .file-node-content:hover .file-node-open-state {
+      visibility: visible;
+    }
+
+    .mac-seamless-mode #typora-sidebar {
+      background-color: var(--side-bar-bg-color);
+    }
+
+    .md-lang {
+      color: rgb(180, 101, 77);
+    }
+
+    .html-for-mac .context-menu {
+      --item-hover-bg-color: #E6F0FE;
+    }
+
+    #md-notification .btn {
+      border: 0px;
+    }
+
+    .dropdown-menu .divider {
+      border-color: rgb(229, 229, 229);
+    }
+
+
+
+
+
+    .typora-export li,
+    .typora-export p,
+    .typora-export,
+    .footnote-line {
+      white-space: normal;
+    }
+  </style>
+</head>
+
+<body class='typora-export os-windows'>
+  <div id='write' class='is-node'>
+    <h1><strong>云搭平台</strong></h1>
+
+    <p> </p>
+    <p><a href='#_Toc6893'>第一章 系统登陆<span> </span>3</a></p>
+    <p><a href='#_Toc10466'>（一）系统整体操作流程<span> </span>3</a></p>
+    <p><a href='#_Toc18977'>（二）系统登录<span> </span>3</a></p>
+    <p><a href='#_Toc9276'>（三）系统首页<span> </span>4</a></p>
+    <p><a href='#_Toc16090'>第二章 应用开发<span> </span>6</a></p>
+    <p><a href='#_Toc3300'>（一）应用-应用操作-应用管理<span> </span>7</a></p>
+    <p><a href='#_Toc16136'>（二）应用-应用操作-模块管理<span> </span>7</a></p>
+    <p><a href='#_Toc25152'>第三章 表单设计器<span> </span>9</a></p>
+    <p><a href='#_Toc1454'>（一）表单设计器页面<span> </span>9</a></p>
+    <p><a href='#_Toc20469'>（二）字段名-外键表<span> </span>12</a></p>
+    <p><a href='#_Toc8346'>（三）应用界面-新增<span> </span>12</a></p>
+    <p><a href='#_Toc30890'>（四）表单设计器-组件详情<span> </span>13</a></p>
+    <p><a href='#_Toc18737'>第四章 工作流设计器<span> </span>21</a></p>
+    <p><a href='#_Toc26986'>（一）系统-应用管理-工作流设置<span> </span>21</a></p>
+    <p><a href='#_Toc16262'>（二）工作流设置-模型管理<span> </span>22</a></p>
+    <p><a href='#_Toc5194'>（三）定义管理<span> </span>25</a></p>
+    <p><a href='#_Toc24165'>（四）发起流程<span> </span>25</a></p>
+    <p><a href='#_Toc32202'>（五）运行中的流程<span> </span>26</a></p>
+    <p><a href='#_Toc25006'>（六）我的待办<span> </span>27</a></p>
+    <p><a href='#_Toc32319'>（七）我的已办<span> </span>28</a></p>
+    <p><a href='#_Toc25732'>第五章 模型<span> </span>31</a></p>
+    <p><a href='#_Toc32700'>（一）计算模型管理<span> </span>31</a></p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h1 id="_Toc6893"><a name='header-n96' class='md-header-anchor '></a><strong>第一章 系统登陆</strong></h1>
+    <h2 id="_Toc10466">（一）系统整体操作流程</h2>
+    <p>1、登录系统，根据用户的不同权限进入不同的操作权限界面。</p>
+    <p>2、进入系统根据需要进行不同的操作。</p>
+    <h2 id="_Toc18977">（二）系统登录</h2>
+    <p>双击桌面上图标进入系统登录界面，如图4-1，选择对应企业编号，输入账号和密码进入系统首页，如图4-1所示。新用户可以点击注册功能，注册完毕进行登录，如图4-1-2所示。</p>
+    <p><img src='assets/img_01.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图4-1 系统登录界面</p>
+    <p><img src='assets/img_03.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图4-1-2 系统登录-注册界面</p>
+    <p> </p>
+    <h2 id="_Toc9276">（三）系统首页</h2>
+    <p>系统成功登录后，进入系统主界面，系统采用的上下、左右结构。窗口上侧显示系统的“首页”、“应用”和“系统”等。以及“管理员”、“个人中心”、“退出”等按钮，下方是创建快捷方式的功能图标和显示部分功能<span>
+      </span>信息。左边为系统内添加的模块，右边为显示的消息通知，如图4-2.</p>
+    <p><img src='assets/img_04.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图4-2 系统首页</p>
+    <p>1、退出</p>
+    <p>点击右上角“管理员”按钮，选择退出选项，为用户彻底离开系统时使用并会回到登陆页面，如图4-3</p>
+    <p><img src='assets/wps4.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图4-3 退出登录</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h1 id="_Toc16090"><a name='header-n135' class='md-header-anchor '></a><strong>第二章</strong> <strong>应用开发</strong>
+    </h1>
+    <p>用户登录进来时先点击“系统”，此时选择“应用管理-应用开发”进入“应用”界面，如图5-0</p>
+    <p><img src='assets/img_08.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p id="_Toc26986">图5-0 系统-应用管理-应用开发</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p>.</p>
+    <p> </p>
+    <p> </p>
+    <p>在此页面上方可以选择“+”号，进行添加应用的功能，如图5-1</p>
+    <p><img src='assets/img_10.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图5-1 添加应用</p>
+    <p> </p>
+    <p> </p>
+    <h2 id="_Toc3300">（一）应用-应用操作-应用管理</h2>
+    <p id="_Toc12805">此页面为“应用管理”，包含了必填项“应用名称”和“是否可用”，以及不必填项“上传背景图片”，用户可以点击保存和取消两个按钮，若点击保存后，才能进入“模块管理”应用中操作，如图5-2</p>
+    <p><img src='assets/img_12.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图5-2 应用管理</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h2 id="_Toc16136">（二）应用-应用操作-模块管理</h2>
+    <p>
+      此页面为“模块管理”其中含有“模块搜索”和“添加模块”功能。当用户点击“添加模块”时，其中包含了必填字段“模块名称”、“是否可用”和“排序”，其中“是否可用”分为‘可用’和‘不可用’可选字段，“菜单图标”可供用户选择，如图5-3。
+    </p>
+    <p><img src='assets/img_14.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p> 模块管理</p>
+    <p><img src='assets/img_15.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图5-3模块管理（菜单图标）</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p>1、模块管理-编辑页面</p>
+    <p>
+      在此页面，通过添加的每一个模块，后面都会有“编辑页面”、“编辑”和“删除”功能，如图5-3-1。其中点击编辑页面，包含了页面名称“点击搜索”、“添加页面”和“返回上级”的按钮，通过添加页面得到的数据，后面都包含着“页面设计”、“页面编辑”和“删除”功能，如图5-3-2
+    </p>
+    <p><img src='assets/img_17.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图5-3-1 页面编辑</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_18.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图5-3-2 页面设计</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h1 id="_Toc25152"><a name='header-n188' class='md-header-anchor '></a><strong>第三章 表单设计器</strong></h1>
+    <p> </p>
+    <p> </p>
+    <h2 id="_Toc1454">(一)、表单设计器页面</h2>
+    <p> </p>
+    <p>
+      在表单设计器页面分为左、中和又三部分，其中左边部分包含了‘单行文本’、‘多行文本’、‘密码’、‘计数器’和‘计数器’等等功能组件，用户可以根据不同的要求进行添加。中间部分内容，主要是组件的显现可直观操作。右边部分为“组件属性”和“表单属性”组成，每一个组件对应的“组件属性”是不同的，<span>
+      </span>右上方又包含了“返回”、“清空”、“浏览”和“保存”按钮，如图5-3-3</p>
+    <p> </p>
+    <p>当选择返回按钮会回到上一级“页面设计”。</p>
+    <p>当选择清空按钮时会清空页面内所有选择的组件。</p>
+    <p>当选择预览按钮的时候，会弹出“表单呈现设置”弹窗，如图5-3-4<span> </span></p>
+    <p>当选择保存按钮的时候，会提示“保存成功”并返回上一级页面，如图5-3-5</p>
+    <p>其中“表单属性”包含“表单尺寸”可以调节组件框的大小。</p>
+    <p>“标签对齐”可以调节表单中组件的左右位置。</p>
+    <p>“标签宽度”可以调节标签宽度。</p>
+    <p>“弹窗模式”在添加数据的时候可以决定弹出框的出来的方向。</p>
+    <p>“禁用”选择之后表单中的组件将无法进行操作。</p>
+    <p>
+      其中“组件属性”包含‘字段名’、‘标题’、‘默认值’、‘占位文本’、‘最大长度’、‘栅格’、‘头部和尾部图标’、‘显示标题’、‘是否必填’、‘是否可清空’、‘是否只读’、‘是否禁用’、‘正则校验’和‘联动设置’等选项，可根据不同组件选择相对应的功能。
+    </p>
+    <p>如图5-3-6</p>
+    <p><img src='assets/img_21.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图5-3-3 表单设计器页面</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_23.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图5-3-4 表单呈现设置</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_24.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图5-3-5 保存按钮</p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_26.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图5-3-6 组件属性和表单属性</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h2 id="_Toc20469">(二)、字段名-外键表</h2>
+    <p>
+      表单页面设计器中，其中“下拉选择”、“级联选择”、“单选框组”和“多选框组”点击右侧的字段名可以添加外键表，会弹出“关联外键表设置”弹窗，包含了“字段名”、“外键表”、“表字段”和“名称字段”根据对应的值选择对应的外键表（外键表不可选错），如图5-3-7
+    </p>
+    <p><img src='assets/img_28.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图5-3-7 字段名设置外键表</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h2 id="_Toc8346">(三)、应用界面-新增</h2>
+    <p>当用户在之前的操作创建好了的模块，点击进入可以在页面根据相对应的组件，通过点击“添加”按钮添加数据，如图6-1</p>
+    <p><img src='assets/img_29.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p><img src='assets/img_30.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p><img src='assets/img_32.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图6-1应用界面-新增</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h2 id="_Toc30890">(四)、表单设计器-组件详情</h2>
+    <p>其中‘单行输入框’、‘多行输入框’、‘密码’、‘计数器’、‘开关’、‘时间选择’、‘日期选择’、‘滑块’、‘颜色选择’、‘标题’、‘操作人’和‘按钮’为基础组件，可以直接选择组件后点击保存按钮，如图6-1-1简单组件。
+    </p>
+    <p>单选输入框：可供用户输入数字、符号以及汉字形式的内容。</p>
+    <p>多行输入框：可供用户输入数字、符合以及汉字形式的内容，如同单行输入框。</p>
+    <p>密码：密码框内输入的内容在新增页面的时候可以加入任何形式的数据，页面会弹出相对应的密码是否保存弹窗。</p>
+    <p>计数器：用户可以点击左右两边的‘+’和‘-’来增数字和减数字，或者可以手动输入数字。</p>
+    <p>开关：是由一个点击左右滑动的组件组成，其中在组件属性中也可以设置开启内容和关闭内容。</p>
+    <p>时间选择：用户可以随意进行时间的‘时’‘分’‘秒’选择。</p>
+    <p>日期选择：用户可以随意进行时间的‘年’‘月’‘日’选择。</p>
+    <p>滑块：是由一个滑动条组成，其中可以在组件属性中设置最小值、最大值和步长。</p>
+    <p>颜色选择：在组件属性中可以通过默认值选择相关的颜色，也可以修改颜色格式。</p>
+    <p>标题：用户可以在组件属性中修改‘背景色’‘标题大小’‘标题宽度’‘标题颜色’和‘标题加粗’等设置。</p>
+    <p>操作人：组件内的字段信息是写死的，由‘创建人’‘创建时间’‘更新人’和‘更新时间’组成，可以通过组件属性调整其中的‘栅格’‘子组件栅格’‘显示创建人’‘显示创建时间’‘显示更新人’和‘显示更新时间’设置。</p>
+    <p>按钮：用户可以通过组件属性中的‘按钮类型’‘按钮大小’‘标题设置’和‘事件设置’来设置。</p>
+    <p> </p>
+    <p><strong>（1）复杂组件：</strong>其中‘下拉单选’、‘单选框组’和‘多选框组’，可以设置“关联表类型”、“关联表”、“关联字段”、“显示字段”和“过滤条件”等字段，如图6-1-2。</p>
+    <p>上传文件：其中可以在组件属性中点击“文件类型”选择‘图片’或‘其它文件’，如图6-1-3。</p>
+    <p>下拉单选：组件为下拉形式，用户可以通过设置外键表来设置‘关联类型’‘关联表’‘关联字段’和 ‘显示字段’。</p>
+    <p>单选框组：组件为多选一的形式来进行选择其中某一项，用户可以通过设置外键表来设置‘关联类型’‘关联表’‘关联字段’和 ‘显示字段’。</p>
+    <p>多选框组：组件内含有多个选项可以进行多选也可以进行单选，用户可以通过设置外键表来设置‘关联类型’‘关联表’‘关联字段’和 ‘显示字段’。</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p>
+      <strong>（2）自编码：</strong>其中编码规则中含有‘自增长数字’、‘字母+数字’、‘字母+日期’、‘日期+自增长数字’、‘字母+日期+自增长数字’，需要用户填写对应的日期格式或者数字长度等要求，如图6-1-4。
+    </p>
+    <p>
+      <strong>（3）日期计算：</strong>组件属性中分为了“基准时间”和“目标时间”，其中分别含有‘关联表’、‘表单字段’、‘关联字段’和‘日期字段’等字段，最终的结果通过“计算结果设置”来设置，并且“计算结果设置”中的‘结果单位’、‘正常’、‘预警值’、‘异常’和‘颜色’是可以随用户修改的。
+    </p>
+    <p>操作步骤：</p>
+    <p>1、例如建一张生产订单页面表，表中有“生产订单”、“订单开始时间”和“订单结束时间”字段。</p>
+    <p>2、在建立一张生产订单时间详情表，其中加入“时间计算”组件，在加入一个其它组件为生产订单页面表的关联字段（订单）。</p>
+    <p>3、在生产订单时间详情表中，“基准时间”中的关联表选中为课程表，‘表单字段’选中上课，‘关联字段’选中id，‘日期字段’选中上课时间；“目标时间”中的‘日期字段’选中下课时间，其它字段和“基准时间一致”如图6-1-5。
+    </p>
+    <p><strong>（4）换算组件：</strong>当用户点击‘公式设置’时，展现出‘换算属性设置’弹窗，其中“公式预览”是需要‘名称字段’和‘+-*/’组成，当用户点击【校验】的时候，会显示校验通过，如图6-1-6。
+    </p>
+    <p><strong>（5）开窗组件：</strong></p>
+    <p>第一步点击【数据源设置】，确定两张表选中其中的字段，设置好‘表字段’、‘工联字段’、‘关联方式’。</p>
+    <p>第二步点击【表格列设置】，将其中所选的字段进行‘显示名称’、‘宽度’、‘表格搜索’和‘表格排序’设置如图6-1-7。</p>
+    <p>
+      <strong>（6）主从表组件：</strong>用户点击“添加选项”时，其中的【数据源设置】和【表格列设置】和上面的开窗组件功能一致，其次用户在设置“主从关联设置”时，确定好其中‘主表字段’以及‘表格字段’的内容，如图6-1-8。
+    </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_36.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图6-1-1简单组件</p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_38.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图6-1-2</p>
+    <p> </p>
+    <p><img src='assets/img_39.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图6-1-3</p>
+    <p> </p>
+    <p><img src='assets/img_41.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图6-1-4</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_42.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p><img src='assets/img_44.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p><img src='assets/img_45.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图6-1-5</p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_46.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p><img src='assets/img_48.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p><span> </span>图6-1-6<span> </span></p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_49.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p><img src='assets/img_50.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p><img src='assets/img_52.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p><span> </span>图6-1-7</p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_52.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p><img src='assets/img_54.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p><span> </span>图6-1-8</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h1 id="_Toc18737"><a name='header-n337' class='md-header-anchor '></a><strong>第四章
+        工作流设计器</strong>
+    </h1>
+    <h1 id="_Toc16262">（一）系统-应用管理-工作流设置</h1>
+    <p>当用户点击“系统”时，在当前页面，用户可以点击“应用管理”应用选择“工作流设置”，如图6-2</p>
+    <p><img src='assets/img_56.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图6-2工作流设置</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h2>（二）工作流设置-模型管理</h2>
+    <p id="_Toc5194">
+      当用户在此页面时可以看到分为左右结构的搭建，左边部分为“模型管理”、“定义管理”、“运行中的流程”、“发起流程”、“我的待办”和“我的已办”，右边部分为“工作流模型的搜索”、“新建模型”和“导入模型”功能，如图6-3</p>
+    <p><img src='assets/img_58.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图6-3模型管理</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p>1、新建模型</p>
+    <p>
+      首先用户点击新建模型，展示“创建模型”页面，如图6-3-1，其中包含了必填字段“模型名称”、“模型key”和不必填字段“描述”，其中字段“模型key”必须是英文格式，在点击保存时，会跳转到模型管理的首页，选择刚才新建的模型，如图6-3-2
+    </p>
+    <p>
+      其中左边部分为各种事件，右边为各种事件的“基本设置”、“候选配置”、“表单配置”和“监听器”，用户可以自己调整，也可以通过某个事件进行延申，如图6-3-3。其中候选配置中“执行人”、“候选用户”和“候选组”是在后面“我的代办”功能中，确定的待办人。<span>
+      </span></p>
+    <p><img src='assets/img_60.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图6-3-1新建模型</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_61.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图6-3-2</p>
+    <p><img src='assets/img_63.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图6-3-3</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p>2、模型部署</p>
+    <p>当新建模型点击“保存”后，会跳转到“模型管理”页面，此时所建模型中都存在着‘部署’和‘删除’两个按钮，点击部署之后此时模型会显示图形内容，如图6-3-4</p>
+    <p><img src='assets/img_64.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图6-3-4</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h2>（三）定义管理</h2>
+    <p>
+      在“定义管理”的页面中可以看到，这里都是之前“模型管理”中新建的模型流程，含有“工作流名称”、“版本”、“类型”、“Key”、“状态”、“描述”、“创建人”、“部署时间”和“操作”，其中“操作”为可选择按钮分为‘挂起’和‘激活’通过“状态”可以看出，上方含有“名称”和“类型”可供搜索，如图7-1
+    </p>
+    <p><img src='assets/img_66.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图7-1定义管理</p>
+    <p> </p>
+    <p> </p>
+    <h2 id="_Toc24165">（四）发起流程</h2>
+    <p>此页面由“模型管理”和“定义管理”创建与激活流程走下来展示的流程模块，其中每一个流程都含有流程名和相对应的描述，并且具有“流程图”和“发起流程”两个按钮，上方是含有一个搜索名称框，如图8-1</p>
+    <p><img src='assets/img_68.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图8-1发起流程</p>
+    <p> </p>
+    <p> </p>
+    <p>2、流程图</p>
+    <p>其中用户点击“流程图”，那么会展示当前流程的整体图形，如图8-1-1</p>
+    <p><img src='assets/img_69.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图8-1-1流程图</p>
+    <p> </p>
+    <p>3、发起流程</p>
+    <p>用户在此点击“发起流程”后，此时页面会展示弹窗内容，其中弹窗内容会根据一开始建立流程时所选择的“表达配置”决定的，列如一开始用户选择了“请假流程表单”那么展示的就是这个表单的内容，如图8-1-2</p>
+    <p><img src='assets/img_71.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图8-1-2发起流程</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h2 id="_Toc32202">（五）运行中的流程</h2>
+    <p>这个页面包含了“工作流名称”、“类型”、“key”、“版本<span>
+      </span>”、“创建时间”和“操作”字段，其中在“操作”字段中含有“挂起”和“详情”两个选择按钮，用户可以进行‘挂起’和‘激活’的操作，也可以通过“详情”来查看整体流程图，页面上方具有“名称”输入框、“类型”选择框和“搜索”按钮，如图9-1
+    </p>
+    <p><img src='assets/img_72.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图9-1运行中的流程</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h2 id="_Toc25006">（六）我的待办</h2>
+    <p>在此页面可以看出上方含有“名称”搜索按钮，页面中含有“流程实例名称”、“任务名称”、“开始时间”、“到期日期”、“所有人”、“执行人”和“操作”，其中“操作”含有‘查看详情’、‘取消签收’和‘执行’按钮，如图10-1
+    </p>
+    <p><img src='assets/img_74.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图10-1我的待办</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p>1、查看详情</p>
+    <p>当用户在点击“查看详情”时，此时会弹出一个弹窗，里面含有“过程意见”、“流程表单”和“流程图”三个选择项，可供用户直接参观，如图10-1-1</p>
+    <p><img src='assets/img_75.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图10-1-1我的待办</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p>2、执行</p>
+    <p>当用户在当前页面点击操作里面的“执行”按钮时，页面会弹出“执行任务”的窗口，其中包含了“意见”的输入框、“取消”、“提交”和“终止”的按钮，如图10-1-2</p>
+    <p><img src='assets/img_77.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图10-1-2执行任务</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h2 id="_Toc32319">（七）我的已办</h2>
+    <p>
+      在当前页面上半部分为“名称搜索”按钮，下半部分含有“流程实列名称”、“任务名称”、“开始时间”、“完成时间”、“工作耗时”、“总耗时”、“所有人”、“执行人”和“操作”等字段，其中“操作”中包含‘查看信息’按钮，如图11-1
+    </p>
+    <p><img src='assets/img_78.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图11-1我的已办</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p>1、查看详情</p>
+    <p>当用户在“我的已办”点击“查看详情”，此时页面弹出“查看详情”弹窗，其中包含了“过程意见”、“流程表单”和“流程图”，如图11-1-1 11-1-2 11-1-3 11-1-4</p>
+    <p><img src='assets/img_80.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图11-1-1查看详情</p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_81.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图11-1-2过程意见</p>
+    <p> </p>
+    <p><img src='assets/img_83.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图11-1-3流程表单</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p><img src='assets/img_84.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图11-1-4流程图</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <h1 id="_Toc25732"><a name='header-n489' class='md-header-anchor '></a><strong>第五章
+        模型</strong>
+    </h1>
+    <h2 id="_Toc32700">（一）计算模型管理</h2>
+    <p>
+      此页面是用户进入计算模型管理，用户可以根据“模型管理”和“模型分类”进行点击搜索，含有操作有“编辑”、“字段设置”、“停用”和“删除”，如图12-1。可以通过“新增模型”添加新的模型，其中“模型名称”、“模型类型”为必填字段，如图12-1-1。
+    </p>
+    <p><img src='assets/img_86.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图12-1计算模型管理</p>
+    <p> </p>
+    <p><img src='assets/img_87.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图12-1-1计算模型管理-新增模型</p>
+    <p> </p>
+    <p>在新建好的模型中点击“字段设置”，此时页面展示了“主表工单号”、“从表工单号”、“实际生产数量”、“计算结果”和“保留小数位数（0~5）”必填字段，同时需要用户选择相对应的应用页面中的字段，如图12-2.</p>
+    <p><img src='assets/img_89.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p><img src='assets/img_90.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图12-2计算模型管理-字段设置</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p>可以通过操作“停用”“启用”来改变“使用状态”为可用或不可用，若为不可用状态，则设置的计算模型为不可使用，如图12-2-1</p>
+    <p><img src='assets/img_91.png' alt='img' referrerPolicy='no-referrer' /> </p>
+    <p>图12-2-1计算模型管理-操作状态</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+  </div>
+</body>
+
+</html>

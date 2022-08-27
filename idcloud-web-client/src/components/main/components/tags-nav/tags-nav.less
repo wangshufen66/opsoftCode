@@ -1,0 +1,48 @@
+.size{
+  width: 100%;
+  height: 100%;
+}//写法可以参考
+.tags-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background: #F0F0F0;
+  //overflow: auto;
+  .size;
+  .btn-con{
+    .el-button{
+      padding: 8px 4px;
+      i{
+        font-size: 18px;
+      }
+    }
+  }
+  .close-con{
+    .el-button{
+      padding: 8px 12px;
+      i{
+        font-size: 18px;
+      }
+    }
+  }
+  .scroll-outer{
+    box-shadow: 0 0 3px 2px rgba(100,100,100,.1) inset;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .scroll-body{
+      white-space: nowrap;
+      transition: left .3s ease;
+      overflow:hidden;
+      width: auto;
+      position: absolute;
+      .el-tag{
+        transition: background .2s ease;
+        cursor: pointer;
+        margin: 2px 3px;
+        padding: 0 13px;
+        height: auto;
+      }
+    }
+  }
+}

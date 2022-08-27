@@ -1,0 +1,111 @@
+@forward "element-plus/theme-chalk/src/common/var.scss" with
+  (
+    $colors: (
+        "primary": (
+          "base": #1c56cf,
+        ),
+        "success": (
+          "base": #42c986,
+        ),
+        "warning": (
+          "base": #eea71c,
+        ),
+        "danger": (
+          "base": #fb6041,
+        ),
+        "error": (
+          "base": #fb6041,
+        ),
+        "info": (
+          "base": #999,
+        ),
+    ),
+    $border-radius:(
+      'base': 2px,
+      'round':20px
+    ),
+    $menu:(
+        'active-color':var(--el-color-warning),
+        'text-color':var(--el-color-white),
+        'hover-text-color':var(--el-color-white),
+        'bg-color':var(--el-color-primary),
+        'active-background-color':#0b2f7a,
+        'hover-bg-color':#0b2f7a,
+        'item-hover-fill':var(--el-menu-active-background-color)
+    ),
+    $button:(
+      'border-radius':6px,
+    ),
+    $table:(
+      'header-background-color': var(--el-background-color-base),
+    ),
+    $button-padding-horizontal: ("default": 50px)
+  );
+
+@use "element-plus/theme-chalk/src/index.scss" as *;
+
+/**
+*  不能通过修改样式变量的样式，通过样式覆盖实现
+*/
+
+// Checkbox
+.el-menu-item {
+  height: 50px;
+  line-height: 50px;
+}
+
+.el-menu-item.is-active {
+  background-color: var(--el-menu-active-background-color);
+}
+.el-sub-menu__title {
+  height: 50px;
+  line-height: 50px;
+}
+
+// Button
+.el-button--medium,
+.el-button--small,
+.el-button--mini {
+  border-radius: var(--el-button-border-radius);
+}
+
+// Table
+.el-table--medium .el-table__cell,
+.el-table--small .el-table__cell,
+.el-table--mini .el-table__cell {
+  padding: 6px 0;
+}
+.el-table__fixed-right {
+  z-index: 0;
+}
+
+// Dialog
+.el-dialog {
+  border-radius: var(--el-border-radius-round);
+}
+.el-dialog__header {
+  border-bottom: 1px solid #e0dede;
+  padding-bottom: 20px;
+}
+.el-dialog__headerbtn {
+  font-size: 24px;
+}
+
+// Icon
+.el-icon {
+  font-size: 13px;
+}
+
+// Loadding
+.el-loading-spinner {
+  .circular {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+// Drawer
+.el-drawer__header {
+  border-bottom: 1px solid #e0dede;
+  padding-bottom: 20px;
+}

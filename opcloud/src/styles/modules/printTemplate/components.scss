@@ -1,0 +1,27 @@
+.print-components {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, 45px);
+  width: 240px;
+  height: 100%;
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+.component-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1eefa;
+  height: 45px;
+  border: 1px dashed #f6f7ff;
+  border-radius: 3px;
+  color: #666;
+  cursor: move;
+  user-select: none;
+  &:hover {
+    border: 1px dashed #3a40f7;
+    color: #409eff;
+    font-weight: 600;
+  }
+}

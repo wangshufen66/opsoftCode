@@ -1,0 +1,120 @@
+// grid表单样式
+::v-deep {
+  @label-width: 120px;
+  @offset: @label-width;
+
+  .el-form-item__label {
+    width: @label-width  !important;
+    // text-align: center;
+  }
+
+  .el-form-item__error {
+    left: @offset ;
+    top: -3px;
+  }
+  .el-input__inner{
+    height: 36px;
+  }
+}
+
+.grid-form-style {
+  display: grid;
+  grid-template-columns: 33% 32% 33%;
+  grid-template-rows: auto;
+  column-gap: 1%;
+
+  @media screen and (max-width: 1770px) {
+    grid-template-columns: 50% 49%;
+  }
+
+  @media screen and (max-width: 1241px) {
+    grid-template-columns: 100%;
+    column-gap: 0;
+  }
+
+  .form-inner {
+    height: 56px;
+
+    .form-item {
+      .input {
+        width: 76%;
+      }
+    }
+  }
+
+  .form-inner-long {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    .input {
+      width: 92%;
+    }
+    @media screen and (max-width: 1770px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      .input {
+        width: 88%;
+      }
+    }
+
+    @media screen and (max-width: 1241px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      .input {
+        width: 76%;
+      }
+    }
+
+
+
+    .picture {
+      position: relative;
+      height: 150px;
+
+      .hint-div {
+        cursor: pointer;
+        position: absolute;
+        left: 98px;
+        bottom: 0;
+        z-index: 1;
+        border-radius: 4px;
+        width: 300px;
+        height: 0;
+        color: #ffffff;
+        overflow: hidden;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: all 0.25s;
+      }
+    }
+  }
+}
+
+.avatar-uploader .el-upload {
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-uploader .el-upload:hover {
+  border-color: #409eff;
+}
+
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 178px;
+  height: 178px;
+  line-height: 178px;
+  text-align: center;
+}
+
+.avatar {
+  width: 178px;
+  height: 178px;
+  display: block;
+}
+
+
+//   table-dialog 样式

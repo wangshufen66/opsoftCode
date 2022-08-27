@@ -1,0 +1,250 @@
+{
+    "name" : "IDCloud",
+    "appid" : "__UNI__AB5DAF7",
+    "description" : "",
+    "versionName" : "2.2.3_210123",
+    "versionCode" : 223002,
+    "transformPx" : false,
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueCompiler" : "weex",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : false,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 4000
+        },
+        "modules" : {
+            "Maps" : {},
+            "Push" : {}
+        },
+        "distribute" : {
+            "android" : {
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ]
+            },
+            "ios" : {},
+            "sdkConfigs" : {
+                "ad" : {},
+                "maps" : {
+                    "amap" : {
+                        "appkey_ios" : "e12aa3da3029c538fa0c6b1907bfc6ed",
+                        "appkey_android" : "1933d3882b07d3fb523b2bcdbf32650e"
+                    }
+                },
+                "push" : {
+                    "unipush" : {}
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            },
+            "splashscreen" : {
+                "android" : {
+                    "hdpi" : "static/launchScreen/drawable-hdpi/outline.9.png",
+                    "xhdpi" : "static/launchScreen/drawable-xhdpi/outline.9.png",
+                    "xxhdpi" : "static/launchScreen/drawable-xxhdpi/outline.9.png"
+                }
+            }
+        },
+        "nvueLaunchMode" : "",
+        "nativePlugins" : {
+            "JY-JPushThird" : {
+                "android_appkey" : "",
+                "android_channel" : "",
+                "android_hw_appid" : "",
+                "android_mz_appid" : "",
+                "android_mz_appkey" : "",
+                "android_oppo_appid" : "",
+                "android_oppo_appkey" : "",
+                "android_oppo_appsecret" : "",
+                "android_vivo_appid" : "",
+                "android_vivo_appkey" : "",
+                "android_xm_appid" : "",
+                "android_xm_appkey" : "",
+                "ios_appkey" : "",
+                "ios_channel" : "",
+                "__plugin_info__" : {
+                    "name" : "【JY-JPush】极光推送插件 - 支持厂商推送 - [试用版，仅用于自定义调试基座]",
+                    "description" : "支持华为、小米、OPPO、VIVO、魅族、华硕厂商推送",
+                    "platforms" : "Android,iOS",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=4039",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : true,
+                    "bought" : 0,
+                    "pid" : "4039",
+                    "parameters" : {
+                        "android_appkey" : {
+                            "des" : "极光推送的APPKEY",
+                            "key" : "JPUSH_APPKEY",
+                            "value" : ""
+                        },
+                        "android_channel" : {
+                            "des" : "极光推送的渠道名称",
+                            "key" : "JPUSH_CHANNEL",
+                            "value" : ""
+                        },
+                        "android_hw_appid" : {
+                            "des" : "极光推送（厂商推送）-华为APPID例：≈appid=*****",
+                            "key" : "com.huawei.hms.client.appid",
+                            "value" : ""
+                        },
+                        "android_mz_appid" : {
+                            "des" : "魅族APPID，以'MZ-'开头",
+                            "key" : "MEIZU_APPID",
+                            "value" : ""
+                        },
+                        "android_mz_appkey" : {
+                            "des" : "魅族APPKEY，以'MZ-'开头",
+                            "key" : "MEIZU_APPKEY",
+                            "value" : ""
+                        },
+                        "android_oppo_appid" : {
+                            "des" : "OPPO的APPID，以'OP-'开头",
+                            "key" : "OPPO_APPID",
+                            "value" : ""
+                        },
+                        "android_oppo_appkey" : {
+                            "des" : "OPPO的APPKEY，以'OP-'开头",
+                            "key" : "OPPO_APPKEY",
+                            "value" : ""
+                        },
+                        "android_oppo_appsecret" : {
+                            "des" : "OPPO的APPSECRET，以'OP-'开头",
+                            "key" : "OPPO_APPSECRET",
+                            "value" : ""
+                        },
+                        "android_vivo_appid" : {
+                            "des" : "VIVO的APPID",
+                            "key" : "com.vivo.push.app_id",
+                            "value" : ""
+                        },
+                        "android_vivo_appkey" : {
+                            "des" : "VIVO的APPKEY",
+                            "key" : "com.vivo.push.api_key",
+                            "value" : ""
+                        },
+                        "android_xm_appid" : {
+                            "des" : "极光推送（厂商推送）-小米APPID，例：MI-*****",
+                            "key" : "XIAOMI_APPID",
+                            "value" : ""
+                        },
+                        "android_xm_appkey" : {
+                            "des" : "极光推送（厂商推送）-小米APPKEY，例：MI-*****",
+                            "key" : "XIAOMI_APPKEY",
+                            "value" : ""
+                        },
+                        "ios_appkey" : {
+                            "des" : "极光推送的APPKEY",
+                            "key" : "JPUSH_APPKEY",
+                            "value" : ""
+                        },
+                        "ios_channel" : {
+                            "des" : "极光推送的渠道名称",
+                            "key" : "JPUSH_CHANNEL",
+                            "value" : ""
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "quickapp" : {},
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "h5" : {
+        "title" : "IDCloud App H5版",
+        "devServer" : {
+            "proxy" : {
+                "/api" : {
+                    "target" : "http://192.168.0.167:7060",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/api" : ""
+                    }
+                }
+            }
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
+            }
+        },
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "AO4BZ-UVEWP-NXYDK-VD6X5-MM3RV-ELF7C"
+                }
+            }
+        },
+        "domain" : "mapp.idcloud.group"
+    }
+}

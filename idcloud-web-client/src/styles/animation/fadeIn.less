@@ -1,0 +1,63 @@
+/*从右到左进入*/
+.fadeInRight {
+  animation:fadeInRight 0.5s;
+  -moz-animation:fadeInRight 0.5s; /* Firefox */
+  -webkit-animation:fadeInRight 0.5s; /* Safari and Chrome */
+  -o-animation:fadeInRight 0.5s; /* Opera */
+}
+/*从右到左进入*/
+@keyframes fadeInRight
+{
+  from {
+    opacity: 0;
+    -webkit-transform: translate(1000px,0);
+    transform: stranslate(1000px,0);
+  }
+  to {
+    opacity:1;
+    -webkit-transform: translate(10px,0);
+    transform: stranslate(10px,0);
+  }
+}
+
+@-moz-keyframes fadeInRight
+{
+  from {
+    opacity:0;
+    -webkit-transform: translate(1000px,0);
+    transform: stranslate(1000px,0);
+  }
+  to {
+    opacity:1;
+    -webkit-transform: translate(10px,0);
+    transform: stranslate(10px,0);
+  }
+}
+
+@-webkit-keyframes fadeInRight
+{
+  from {
+    opacity:0;
+    -webkit-transform: translate(1000px,0);
+    transform: stranslate(1000px,0);
+  }
+  to {
+    opacity:1;
+    -webkit-transform: translate(10px,0);
+    transform: stranslate(10px,0);
+  }
+}
+
+@-o-keyframes fadeInRight
+{
+  from {
+    opacity:0;
+    -webkit-transform: translate(1000px,0);
+    transform: stranslate(1000px,0);
+  }
+  to {
+    opacity:1;
+    -webkit-transform: translate(10px,0);
+    transform: stranslate(10px,0);
+  }
+}

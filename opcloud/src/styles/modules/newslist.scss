@@ -1,0 +1,11 @@
+.newslist {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1 0 0;
+
+  .page-nation {
+    margin: 20px 0;
+    text-align: right;
+  }
+}

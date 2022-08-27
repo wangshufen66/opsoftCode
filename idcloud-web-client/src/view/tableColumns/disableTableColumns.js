@@ -1,0 +1,35 @@
+export default [
+  {
+    tag: "el-table-column",
+    label: "禁用状态",
+    prop: "isDisable",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "Checkbox",
+  },
+  {
+    tag: "el-table-column",
+    label: "禁用人代码",
+    prop: "disablePersonNumber",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "禁用人姓名",
+    prop: "disablePersonName",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "禁用时间",
+    prop: "disableTime",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    resizable: false,
+    comp: "Datetime",
+  },
+];

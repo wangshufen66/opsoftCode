@@ -1,0 +1,71 @@
+@forward "element-plus/theme-chalk/src/common/var.scss" with
+  (
+    $colors: (
+        "primary": (
+          "base": #1c56cf,
+        ),
+        "success": (
+          "base": #42c986,
+        ),
+        "warning": (
+          "base": #eea71c,
+        ),
+        "danger": (
+          "base": #fb6041,
+        ),
+        "error": (
+          "base": #fb6041,
+        ),
+        "info": (
+          "base": #999,
+        ),
+    ),
+    $border-radius:(
+      'round':20px
+    ),
+    // $menu:(
+    //     'active-color':var(--el-color-warning),
+    //     'text-color':var(--el-color-white),
+    //     'hover-text-color':var(--el-color-white),
+    //     'background-color':var(--el-color-primary),
+    //     'active-background-color':#0b2f7a,
+    //     'hover-background-color':#0b2f7a,
+    //     'item-hover-fill':var(--el-menu-active-background-color)
+    // ),
+    $table:(
+      'header-background-color': var(--el-background-color-base),
+    ),
+    $button-padding-horizontal: ("default": 50px)
+  );
+
+@use "element-plus/theme-chalk/src/index.scss" as *;
+
+/**
+*  不能通过修改样式变量的样式，通过样式覆盖实现
+*/
+// Checkbox
+.el-menu-item {
+  height: 50px;
+  line-height: 50px;
+}
+
+.el-sub-menu__title {
+  height: 50px;
+  line-height: 50px;
+}
+
+// Button
+.el-button--medium,
+.el-button--small,
+.el-button--mini {
+  border-radius: var(--el-button-border-radius);
+}
+
+.el-dialog__headerbtn {
+  font-size: 18px;
+}
+
+// Icon
+.el-icon {
+  font-size: 13px;
+}

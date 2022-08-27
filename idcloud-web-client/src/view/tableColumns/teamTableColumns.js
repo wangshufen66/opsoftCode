@@ -1,0 +1,96 @@
+import auditTableColumns from './auditTableColumns';
+import disableTableColumns from './disableTableColumns';
+
+const teamInputPopupColumns=[
+  {
+    tag: "el-table-column",
+    label: "班组代码",
+    prop: "number",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "班组名称",
+    prop: "name",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "班长代码",
+    prop: "chargePersonNumber",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "班长名称",
+    prop: "chargePersonName",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "上班时间",
+    prop: "workStartTime",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "下班时间",
+    prop: "workEndTime",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "备注",
+    prop: "note",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "制单人代码",
+    prop: "docMakerNumber",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "制单人姓名",
+    prop: "docMakerName",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "String",
+  },
+  {
+    tag: "el-table-column",
+    label: "创建时间",
+    prop: "createTime",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    comp: "Datetime",
+  },
+  {
+    tag: "el-table-column",
+    label: "更新时间",
+    prop: "updateTime",
+    minWidth: 180,
+    showOverflowTooltip: true,
+    resizable: false,
+    comp: "Datetime",
+  },
+];
+const teamTableColumns=[teamInputPopupColumns,auditTableColumns,disableTableColumns].flat(1);
+export {teamTableColumns as default,teamInputPopupColumns};

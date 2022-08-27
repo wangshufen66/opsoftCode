@@ -1,0 +1,326 @@
+//****** add by microler **************
+//** 新增的【冷色调】看板样式
+//***********************************
+
+$title-width: 400px;
+$bg-blue-light: #0889d8;
+$bg-blue-dark: #070b3b;
+$bg-white: #fff;
+$bg-blue-light-opacity: 0.5;
+
+.bg{
+  background: url("../../assets/previewReport/bg_star.png") no-repeat;
+  height:100%;
+  width:100%;
+  overflow: hidden;
+  background-size:cover;
+  //background-color: $bg-blue-dark;
+}
+
+//公司logo样式
+.logo-company{
+  font-size: 1.5rem;
+  color: rgba(20,255,255,0.9);
+  text-shadow: 3px 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+//新版标题行样式
+.div-preview-row{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+//新版标题logo的span容器样式
+.div-preview-logo{
+  flex: 1;
+  text-align: center;
+}
+
+//新版标题的logo样式(客户公司logo)
+.i-preview-logo-user{
+  width: 3rem;
+  height: auto;
+  opacity: 0.9;
+  align-self: center;
+}
+//新版标题的logo样式（自己公司logo）
+.i-preview-logo{
+  font-size: 3rem;
+  color: white;
+  opacity: 0.9;
+  text-shadow: 3px 2px 3px rgba(100, 155, 255, 0.9);
+}
+
+//新版标题背景样式
+.div-preview-title-bg{
+  flex: 10;
+  width: 80%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-image: url("../../assets/previewReport/bg_title_light.png");
+  opacity: 0.7;
+}
+
+/*透明度向左渐变*/
+.bg-transparent-gradient-left{
+  background: linear-gradient(to left, rgba(255,255,255,0) 0%,$bg-blue-dark 100%);
+}
+
+/*透明度向右渐变*/
+.bg-transparent-gradient-right{
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,$bg-blue-dark 100%);
+}
+
+/*半透明效果背景*/
+.bg-transparent-half{
+  opacity:$bg-blue-light-opacity;
+}
+
+/*标题的梯形背景:border加粗方式*/
+.large-title-bg-trapezoid{
+  background-color: transparent;
+  height: 0px;
+  border-top:36px solid $bg-blue-light;
+  border-left:36px solid transparent;
+  border-right:36px solid transparent;
+}
+
+/*梯形标题背景的下边框线*/
+.large-title-bg-trapezoid-line-bottom{
+  background-color: transparent;
+  height: 0px;
+  border-top: 1px solid $bg-white;
+  margin: 0px 36px;
+  -webkit-box-shadow: 2px 0px 8px 1px #bbcbf8;
+  box-shadow: 2px 0px 8px 2px #bbcbf8;
+  opacity: 0.6;
+}
+/*梯形标题背景的左边框线*/
+.large-title-bg-trapezoid-line-left{
+  position: absolute;
+  background-color: white;
+  height: 0px;
+  width: 1px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  margin-left: 18px;
+  margin-top: -7px;
+  padding-bottom: 51px;
+  box-shadow: 2px 0px 8px 0.01rem #bbcbf8;
+  opacity: 0.6;
+}
+/*梯形标题背景的右边框线*/
+.large-title-bg-trapezoid-line-right{
+  float: right;
+  background-color: white;
+  height: 0px;
+  width: 1px;
+  -webkit-transform: rotate(46deg);
+  transform: rotate(46deg);
+  margin-top: -8px;
+  margin-right: 17px;
+  padding-bottom: 52px;
+  box-shadow: 2px 0px 8px 0.01rem #bbcbf8;
+  opacity: 0.6;
+}
+
+.div-over{
+  position: absolute;
+}
+
+/*标题文字*/
+.title-div{
+  text-align: center;
+}
+
+//头部标题的span
+.title-span{
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  z-index: 990;
+  font-size: 2rem;
+  color: white;
+  //margin-top: 0.2rem;
+  //margin-left: -1rem;
+
+  top: 2rem;
+  left: 50%;
+  transform: translate(-50%, -50%); /*向左向上分别平移自身的一半*/
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+//头部左侧小标题
+.subtitle-span-left{
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  z-index: 993;
+  font-size: 0.8rem;
+  color: white;
+  //margin-top: 0.2rem;
+  //margin-left: -1rem;
+
+  top: 2.3rem;
+  left: 18.5%;
+  transform: translate(-50%, -50%); /*向左向上分别平移自身的一半*/
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+//头部右侧小标题
+.subtitle-span-right{
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  z-index: 992;
+  font-size: 0.8rem;
+  color: white;
+  //margin-top: 0.2rem;
+  //margin-left: -1rem;
+
+  top: 2.3rem;
+  left: 82%;
+  transform: translate(-50%, -50%); /*向左向上分别平移自身的一半*/
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+//模板编辑页面，头部左侧 logo 显示/隐藏 开关
+.logo-switch-left{
+  width: 2rem;
+  height: 1rem;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  font-size: 0.8rem;
+  color: white;
+
+  top: 0.1rem;
+  left: 2.8%;
+  opacity: 0.8;
+}
+//模板编辑页面，头部左侧 logo 选择按钮
+.logo-select-button-left{
+  border:none;
+  background: transparent;
+  font-size: 0.8rem;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+
+  color: white;
+
+  top: -0.3rem;
+  left: 5.2%;
+  opacity: 0.8;
+}
+//模板编辑页面，头部左侧 logo 选择按钮 鼠标悬浮样式
+.logo-select-button-left:hover{
+  border:none;
+  background: transparent;
+}
+
+// 模板编辑中放LOGO图的div样式
+.div-edit-logo{
+  display: flex;
+  flex-direction: column;
+}
+// 模板编辑中控制logo显示/隐藏的开关样式
+.div-edit-log-switch{
+  flex: 1;
+  text-align: center;
+  z-index: 999;
+  align-self: center;
+  opacity: 0.8;
+}
+
+// 模板编辑中控制logo弹窗选择的按钮样式
+.div-edit-log-select{
+  flex: 1;
+  text-align: center;
+  z-index: 999;
+  align-self: center;
+  opacity: 0.8;
+  border:none;
+  background: transparent;
+  font-size: 0.8rem;
+  color: white;
+}
+.div-edit-log-select:hover{
+  border:none;
+  background: transparent;
+}
+
+//模板编辑页面，头部右侧 logo 显示/隐藏 开关
+.logo-switch-right{
+  width: 2rem;
+  height: 1rem;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  font-size: 0.8rem;
+  color: white;
+
+  top: 0.1rem;
+  left: 94.5%;
+  opacity: 0.8;
+}
+
+
+/*element-ui layout 布局基础必要样式*/
+
+.el-row {
+  margin-bottom: 0px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.el-col {
+  border-radius: 0px;
+}
+.bg-transparent {
+  background: transparent;
+}
+//标题上面的颜色条的基本样式
+.title-color-bar-flex-item{
+  height: 30px;
+  width: 100%;
+}
+//弥补标题上方 左边颜色渐变条的不足：与中间的颜色条有间隙，在TV这种分辨率低的大屏设备中特别明显
+.title-color-bar{
+  border-right-width: 10px;
+  border-right-style: solid;
+  border-right: #0889d8;
+}
+.bg-blue-light{
+  background-color: $bg-blue-light;
+  opacity:$bg-blue-light-opacity;
+}
+.bg-purple-dark {
+  background: #99a9bf;
+}
+.bg-purple {
+  background: #d3dce6;
+}
+.bg-purple-light {
+  background: #e5e9f2;
+}
+.grid-content {
+  min-height: 30px;
+}
+.row-bg {
+  padding: 0px 0;
+  background-color: #f9fafc;
+}
+
+//字体阴影样式
+.shadow-font {
+  font-family: '新宋体';
+  color:rgba(255,255,255,0.9);
+  text-shadow: 3px 2px 3px rgba(100, 155, 255, 0.9);
+}

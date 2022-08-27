@@ -1,0 +1,76 @@
+// grid表单样式
+.grid-form-style {
+  display: grid;
+  grid-template-columns: 33% 32% 33%;
+  grid-template-rows: auto;
+  column-gap: 1%;
+
+  .form-inner {
+    .form-item {
+      .input {
+        width: 60%;
+      }
+    }
+  }
+
+  .form-inner-long {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    .input {
+      width: 87%;
+    }
+
+    .picture {
+      position: relative;
+      height: 150px;
+
+      .hint-div {
+        cursor: pointer;
+        position: absolute;
+        left: 98px;
+        bottom: 0;
+        z-index: 1;
+        border-radius: 4px;
+        width: 300px;
+        height: 0;
+        color: #ffffff;
+        overflow: hidden;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: all 0.25s;
+      }
+    }
+  }
+}
+
+.avatar-uploader .el-upload {
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-uploader .el-upload:hover {
+  border-color: #409eff;
+}
+
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 178px;
+  height: 178px;
+  line-height: 178px;
+  text-align: center;
+}
+
+.avatar {
+  width: 178px;
+  height: 178px;
+  display: block;
+}
+
+
+//   table-dialog 样式
+
