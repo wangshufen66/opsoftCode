@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "opfont"; /* Project id 2803935 */
+  src: url("./../assets/fonts/opfont.woff2?t=1631261449149") format("woff2"),
+    url("./../assets/fonts/opfont.woff?t=1631261449149") format("woff"),
+    url("./../assets/fonts/opfont.ttf?t=1631261449149") format("truetype"),
+    url("./../assets/fonts/opfont.svg?t=1631261449149#opfont") format("svg");
+}
+
+.opfont {
+  font-family: "opfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.opicon-gourp-right:before {
+  content: "\e62b";
+}
+
+.opicon-group-left:before {
+  content: "\e62c";
+}
+
+.opicon-home:before {
+  content: "\e64f";
+}
+
+.opicon-userlist:before {
+  content: "\e63d";
+}
+
+.opicon-user:before {
+  content: "\e643";
+}
+
+.opicon-deal:before {
+  content: "\e61f";
+}
+
+.opicon-clue:before {
+  content: "\e6b2";
+}
+
+.opicon-comprehensive:before {
+  content: "\e61c";
+}
+
+.opicon-startup:before {
+  content: "\e67d";
+}
+
+.opicon-message:before {
+  content: "\e665";
+}
+
+.opicon-system-manage:before {
+  content: "\e623";
+}
+
+.opicon-account:before {
+  content: "\e626";
+}
+
+.opicon-role-manage:before {
+  content: "\e612";
+}
+
+.opicon-staff-manage:before {
+  content: "\e62e";
+}
+
+.opicon-tenant:before {
+  content: "\e64b";
+}
+
+.opicon-operation:before {
+  content: "\e682";
+}
+
+.opicon-changepwd:before {
+  content: "\e602";
+}
+
+.opicon-dictionary:before {
+  content: "\e652";
+}
+
+.opicon-reportform:before {
+  content: "\e61b";
+}
+
+.opicon-contract:before {
+  content: "\e6b2";
+}
+.opicon-log:before {
+  content: "\e60a";
+}
+.opicon-yunda-dev:before {
+  content: "\e630";
+}
+.opicon-delivery-manage:before {
+  content: "\e631";
+}
+.opicon-yunda-main:before {
+  content: "\e632";
+}
+.opicon-app-download:before {
+  content: "\e633";
+}
+.opicon-yunda-test:before {
+  content: "\e634";
+}
+.opicon-yunda-demo:before {
+  content: "\e635";
+}
+.opicon-yunda-dashboard:before {
+  content: "\e636";
+}
+.opicon-knowledge-base:before {
+  content: "\e637";
+}
+
+
+
+
+
+
+

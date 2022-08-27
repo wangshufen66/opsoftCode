@@ -1,0 +1,45 @@
+
+@host = http://192.168.0.230:8082
+
+###
+GET https://apiblog.jspang.com/default/getArticleList
+
+
+###
+GET {{host}}/manage/manageUser/list
+Content-Type: application/json
+Authorization: Bearer c40be462-7da6-44d7-9964-8a6317d2cee9
+
+###
+https://api.idcloud.group/idcloud/deviceReport/deviceSummaryStatics?startTime=2021-09-10+00:00:00&endTime=2021-09-11+00:00:00&orgId=63&containerId=1710
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3b3JrZXIkJDEwMDMyIiwiZXhwIjoxNjMxMjcyNTA5LCJvcmdJZCI6NjN9.VtjXO0VoC02L7UcGP98VcHkTAfKWk1ChJNP0yza2PCovLSSU2D2_7FvAJa7YOHE_baX9QQN7PHGGyAKvMtWiZA
+
+
+###
+# 新增
+POST {{host}}/manage/manageUser/add
+Content-Type: application/json
+
+{
+  "id": 3,
+  "followList": [
+      {   
+          "userInfoId": 3,
+          "followLog": "你好111"
+      },
+      {   
+          "userInfoId": 3,
+          "followLog": "你好aa"
+      }
+  ]
+}
+
+###
+# 修改
+POST {{host}}/manage/manageUser/update
+Content-Type: application/json
+
+{
+  "id": 3,
+  "followList": ''
+}

@@ -1,0 +1,230 @@
+.login-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    background-image: url('./../../assets/images/login-bg.png');
+
+    .main-contain-img {
+        width: 13%;
+        margin-top: 4px;
+        margin-left: 40px;
+    }
+
+    .main-contain {
+        display: flex;
+        justify-content: space-between;
+        justify-items: center;
+        width: 89%;
+        align-items: center;
+
+        .text-tip {
+            top: 40%;
+            color: #101010;
+
+            .text1-css {
+                font-size: 42px;
+                font-weight: bold;
+            }
+
+            .text1-2 {
+                color: #1C56CF;
+            }
+
+            .text2-css {
+                margin-top: 20px;
+                color: #333333;
+                font-size: 20px;
+            }
+
+        }
+
+        .login-form {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0px 20px 30px 0px rgba(231, 239, 255, 100);
+            ;
+            justify-content: space-between;
+            text-align: center;
+            line-height: 20px;
+            width: 40%;
+            height: auto;
+            margin-top: 70px;
+
+            .login-form {
+                color: #1C56CF;
+                font-size: 16px;
+                margin-left: 85%;
+            }
+
+            .forget-pwd {
+                color: #1C56CF;
+                font-size: 16px;
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 10px;
+            }
+        }
+
+
+    }
+
+    .footer-link {
+
+        color: grey;
+        font-size: 16px;
+        flex-direction: column;
+        margin-left: 171px;
+    }
+
+    .login-footer {
+        margin-top: 130px;
+    }
+
+    .text-tip {
+        margin-left: 171px;
+        font-size: 20px;
+    }
+
+    .register-form {
+        height: 660px;
+        margin-bottom: 61px;
+    }
+
+    .el-input__inner {
+        background-color: rgba(245, 245, 245, 100);
+        height: 50px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        padding-left: 42px;
+        border-radius: 4px;
+        line-height: 20px;
+    }
+
+    .login-logo {
+        width: 32%;
+        height: 9%;
+        left: 971px;
+        color: #1C56CF;
+        font-size: 28px;
+        margin: 0 auto;
+        margin-top: 60px;
+        font-weight: bold;
+    }
+
+    .register-logo {
+        width: 200px;
+        height: 100px;
+        background-image: url('./../../assets/images/blogo.png');
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .form-wrap {
+        width: 71%;
+        margin: 45px auto 20px auto;
+        align-items: center;
+        color: #F5F5F5;
+
+    }
+
+    .el-button {
+        width: 100%;
+        height: 48px;
+    }
+
+    .register {
+
+        font-size: 16px;
+        cursor: pointer;
+        color: #1C56CF;
+
+        .question {
+            opacity: 0.5;
+        }
+    }
+
+    .go-register {
+        color: #1C56CF;
+    }
+
+    .go-helper {
+        color: #333333;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+
+
+    .send-register {
+        margin-top: 10px;
+    }
+
+    .msgcode {
+        display: flex;
+        justify-content: space-between;
+        color: #ffffff;
+        cursor: pointer;
+        width: 100%;
+
+        .msg-left {
+            width: 65%;
+        }
+
+    }
+
+    .bottom-wrap {
+        display: flex;
+        color: #333333;
+        margin-bottom: 20px;
+        justify-content: space-between;
+    }
+
+    .login-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .secondMsgBtn {
+        color: #1C56CF;
+        font-size: 16px;
+        border: 1px solid rgba(28, 86, 207, 100);
+        ;
+        background-color: rgba(229, 237, 255, 100);
+        line-height: 20px;
+        border-radius: 4px;
+        width: 159px;
+        height: 44px
+    }
+
+}
+
+.sendBtn {
+    font-size: 12px;
+    width: 120px;
+    padding: 0;
+}
+
+a {
+    color: grey;
+}
+
+.login-item {
+
+    .el-form-item {
+        display: flex;
+        margin-bottom: 19px;
+    }
+
+    .el-form-item__content {
+        margin-bottom: 10px;
+    }
+
+
+
+    .text-tip {
+        color: #333333;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,110 @@
+.chart-property-board {
+  height: 100%;
+  width: 350px;
+  border: 0 solid #eee;
+  border-width: 0 0 0 1px;
+  background-color: #f7f7f7;
+  height: calc(100vh - 68px);
+  display: flex;
+  flex-direction: column;
+  &-content {
+    flex: 1 0 auto;
+  }
+  .el-form {
+    // padding: 15px 20px 15px 15px;
+    padding: 15px 20px 30px 15px;
+  }
+  .divider-wrap {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding: 10px 8px;
+    margin-bottom: 8px;
+    background-color: rgb(230, 228, 228);
+    border-radius: 2px;
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 15px;
+      width: 4px;
+      margin-right: 8px;
+      background-color: #539af8;
+    }
+  }
+}
+
+.form-items-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pro-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 28px 40px 28px;
+  height: 110px;
+  width: 150px;
+  .el-input__inner {
+    border: none;
+    height: 20px;
+    background: transparent;
+    padding: 0 5px;
+  }
+  .top {
+    grid-column: span 3;
+    justify-self: center;
+    width: 36px;
+    .el-input__inner {
+      text-align: center;
+    }
+  }
+  .left {
+    align-self: center;
+    justify-self: right;
+    width: 36px;
+    .el-input__inner {
+      text-align: right;
+    }
+  }
+  .center {
+    border: 1px solid #bbb;
+    background-color: #eee;
+  }
+  .right {
+    align-self: center;
+    width: 36px;
+  }
+  .bottom {
+    grid-column: span 3;
+    justify-self: center;
+    width: 36px;
+    .el-input__inner {
+      text-align: center;
+    }
+  }
+}
+
+.search-item {
+  position: relative;
+  border: 1px dashed #539af8;
+  padding: 10px 10px 0;
+  margin-bottom: 10px;
+  .close-btn {
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    color: #f86a6a;
+    z-index: 1;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+
+.cascader-wrap {
+  position: relative;
+  // .custom-cascader {
+  //   position: absolute;
+  //   right: 0;
+  //   z-index: -10;
+  // }
+}

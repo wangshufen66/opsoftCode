@@ -1,0 +1,72 @@
+export default [
+    {
+        label: "委外接收单号",
+        prop: "billNo",
+        minWidth: 180,
+        showOverflowTooltip: true,
+        comp: "String",
+      },
+      {
+        label: "委外发出单号",
+        prop: "subOutNo",
+        minWidth: 180,
+        showOverflowTooltip: true,
+        comp: "String",
+      },
+    {
+        label: "委外计划单号",
+        prop: "subPlanNo",
+        minWidth: 180,
+        showOverflowTooltip: true,
+        comp: "String",
+      },
+      {
+        label: "生产订单",
+        prop: "icmoNo",
+        minWidth: 180,
+        showOverflowTooltip: true,
+        comp: "String",
+      },
+      {
+        label: "工序编码",
+        prop: "processCode",
+        minWidth: 180,
+        showOverflowTooltip: true,
+        comp: "String",
+      },
+      {
+        label: "工序名称",
+        prop: "processName",
+        minWidth: 180,
+        showOverflowTooltip: true,
+        comp: "String",
+      },
+      {
+        label: "委外计划数量",
+        prop: "planOutQty",
+        minWidth: 180,
+        showOverflowTooltip: true,
+        comp: "String",
+      },
+      {
+        label: "接受数量",
+        prop: "rcvQty",
+        minWidth: 180,
+        showOverflowTooltip: true,
+        comp: "String",
+      },
+      {
+        label: "合格数量",
+        prop: "rcvGoodQty",
+        minWidth: 180,
+        showOverflowTooltip: true,
+        comp: "String",
+      },
+      {
+        label: "不合格数量",
+        prop: "rcvUnGoodQty",
+        width: 180,
+        showOverflowTooltip: true,
+        comp: "String",
+      }
+]

@@ -1,0 +1,119 @@
+.branch-wrap {
+  display: inline-flex;
+  .branch-box {
+    display: flex;
+    overflow: visible;
+    min-height: 180px;
+    height: auto;
+    border-bottom: 2px solid #cccccc;
+    border-top: 2px solid #cccccc;
+    position: relative;
+    margin-top: 15px;
+    .col-box {
+      background: #f0f2f5;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        margin: auto;
+        width: 2px;
+        height: 100%;
+        background-color: #cacaca;
+      }
+
+      .top-left-cover-line {
+        position: absolute;
+        height: 3px;
+        width: 50%;
+        background-color: #f0f2f5;
+        top: -2px;
+        left: -1px;
+      }
+      .bottom-left-cover-line {
+        position: absolute;
+        height: 3px;
+        width: 50%;
+        background-color: #f0f2f5;
+        bottom: -2px;
+        left: -1px;
+      }
+      .top-right-cover-line {
+        position: absolute;
+        height: 3px;
+        width: 50%;
+        background-color: #f0f2f5;
+        top: -2px;
+        right: -1px;
+      }
+      .bottom-right-cover-line {
+        position: absolute;
+        height: 3px;
+        width: 50%;
+        background-color: #f0f2f5;
+        bottom: -2px;
+        right: -1px;
+      }
+    }
+  }
+}
+
+.arrows {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    border-style: solid;
+    border-width: 8px 6px 4px;
+    border-color: #cacaca transparent transparent;
+  }
+}
+.node-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  width: 220px;
+  min-height: 72px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    &::after {
+      border: 1px solid #3296fa;
+      box-shadow: 0 0 6px 0 rgba(50, 150, 250, 0.3);
+    }
+  }
+  &::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+  .title {
+    height: 24px;
+    line-height: 24px;
+    color: #ffffff;
+    text-align: left;
+  }
+  .content {
+    position: relative;
+  }
+}

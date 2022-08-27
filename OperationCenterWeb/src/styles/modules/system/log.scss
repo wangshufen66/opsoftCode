@@ -1,0 +1,17 @@
+.log-list {
+  display: flex;
+  flex: 1 0 0%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.search-wrap {
+  display: flex;
+}
+
+.detail {
+  line-height: 32px;
+  span {
+    color: var(--color-primary);
+  }
+}

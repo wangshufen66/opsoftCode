@@ -1,0 +1,51 @@
+@host = http://192.168.0.230:8082
+
+@host-local = http://192.168.0.29:8082/
+
+###
+# 查询
+GET {{host}}/manage/manageUser/list
+Content-Type: application/json
+
+###
+# 查询个人
+GET {{host}}/manage/manageUser/getDetail/1
+Content-Type: application/json
+###
+# 新增
+POST {{host}}/manage/manageUser/add
+Content-Type: application/json
+
+{
+  "id": 181,
+  "followList": [
+      {   
+          "userInfoId": 181,
+          "followLog": "你好111"
+      },
+      {   
+          "userInfoId": 181,
+          "followLog": "你好aa"
+      }
+  ]
+}
+
+###
+# 修改
+POST {{host}}/manage/manageUser/update
+Content-Type: application/json
+
+{
+  "id": 181,
+  "orgName": '1121'
+}
+
+
+###
+# 审核
+POST {{host}}/manage/manageUser/audit
+Content-Type: application/json
+
+{
+  "id": "1"
+}

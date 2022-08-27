@@ -1,0 +1,21 @@
+.print-order-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-item {
+  display: flex;
+  line-height: 34px;
+}
+
+.item-label {
+  margin-right: 20px;
+}
+
+.qrcode-item {
+  grid-row-start: span 6;
+}
+
+.full-row{
+  grid-column-start: span 2;
+}

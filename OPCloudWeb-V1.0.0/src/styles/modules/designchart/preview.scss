@@ -1,0 +1,40 @@
+.desgin-main-wrap {
+    flex: 1;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    .chart-preview-board {
+        height: calc(100vh - 68px);
+        padding: 20px 12px;
+        display: grid;
+    }
+}
+
+.chart-item-wrap {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-out 0.35s;
+    &.active {
+        border: 1px dashed #539af8;
+        box-shadow: 0 0 20px #bbb;
+    }
+    .title {
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        height: 30px;
+        padding-bottom: 8px;
+        .line {
+            height: 15px;
+            width: 4px;
+            margin-right: 8px;
+            background-color: #539af8;
+        }
+    }
+    .chart-item {
+        flex: 1;
+    }
+}

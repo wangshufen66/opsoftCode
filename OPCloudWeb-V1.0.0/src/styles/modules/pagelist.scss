@@ -1,0 +1,15 @@
+.page-nation {
+    margin: 20px 0;
+    text-align: right;
+}
+
+.page-name-wrap {
+    display: flex;
+    .el-tag {
+        margin-left: 5px;
+    }
+}
+
+.table-extend {
+    height: calc(100% - 60px);
+}

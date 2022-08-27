@@ -1,0 +1,117 @@
+.home {
+  background: #efefef;
+  margin-left: -18px;
+  margin-top: -10px;
+  .top-centent,
+  .bottom-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  .top-centent > div {
+    // border: 1px solid #000;
+    background-color: rgba(255, 255, 255, 100);
+    width: 49%;
+    height: 376px;
+    padding: 10px;
+  }
+  .top-centent .link-area {
+    padding: 30px;
+  }
+
+  .bottom-content {
+    margin-top: 15px;
+    p {
+      position: absolute;
+      bottom: 12px;
+      left: 40%;
+    }
+  }
+  .bottom-content > div {
+    // border: 1px solid #000;
+    background-color: rgba(255, 255, 255, 100);
+    width: 49%;
+    height: 400px;
+    padding: 10px;
+  }
+  .scroll-area {
+    overflow: hidden;
+  }
+  .news-wrap {
+    animation: move 15s linear infinite;
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+  .scrollNewsList {
+    overflow: hidden;
+    margin: 10px 0 10px;
+  }
+  @keyframes move {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-660px);
+    }
+  }
+
+  .news-item {
+    display: flex;
+    margin: 8px 0;
+    .item-date {
+      margin: 0 11px;
+    }
+    .newsicon {
+      // background-image: url("./../../assets/images/newicon.png");
+      width: 26px;
+      height: 13px;
+      // background-size: contain;
+      // background-repeat: no-repeat;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    // &::before {
+    //   content: "▶";
+    //   display: block;
+    // }
+  }
+  .module-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .module-item {
+    width: 171px;
+    height: 147px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0px 0px 2px 0px #999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .svgicon {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      margin: 0 auto;
+      .svgiconimg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .alinktest {
+      margin-top: 6px;
+      a {
+        color: #666;
+      }
+    }
+  }
+}

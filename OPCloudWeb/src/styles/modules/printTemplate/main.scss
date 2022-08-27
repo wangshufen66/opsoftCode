@@ -1,0 +1,23 @@
+.template-main {
+  flex: 1 0 0%;
+  margin-left: 10px;
+  background-color: #f7f7f7;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  padding: 20px;
+  .el-button-group {
+    margin: 0 10px;
+  }
+}
+.hiprint-printTemplate {
+  overflow-y: auto;
+}
+.fixedDialog {
+  .hiprint-option-items {
+    font-size: 14px;
+  }
+}

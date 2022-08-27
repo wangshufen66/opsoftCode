@@ -1,0 +1,28 @@
+.template-main {
+  flex: 1 0 0%;
+  padding: 20px;
+  background-color: #fff;
+  height: calc(100vh - 70px);
+  overflow: auto;
+  position: relative;
+  .hiprint-printPanel {
+    overflow: hidden;
+    page-break-after: always;
+  }
+  .hinnn-layout-sider {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 450px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    padding: 10px;
+    overflow: auto;
+  }
+}
+.fixedDialog {
+  .hiprint-option-items {
+    font-size: 14px;
+  }
+}

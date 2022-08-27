@@ -1,0 +1,64 @@
+.desgin-chart-main-wrap {
+  height: calc(100vh - 68px);
+  flex: 1;
+  background-color: #e4e4e4;
+  .report-search-wrap {
+    height: 52px;
+  }
+
+  .desgin-board-wrap {
+    height: 100%;
+    overflow: auto;
+  }
+
+  .design-board {
+    height: 100%;
+    padding: 10px;
+    display: grid;
+  }
+
+  .design-container-board {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    position: relative;
+    border: 1px dashed transparent;
+    padding: 10px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .active {
+    border-color: #539af8;
+    box-shadow: 0 0 20px #bbb;
+    position: relative;
+  }
+
+  .oper-button-wrap {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+  }
+
+  .right-oper-icon {
+    border: 1px solid #eee;
+    border-radius: 100%;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+
+  .icon-error {
+    border-color: #f56c6c;
+    color: #f56c6c;
+    background: #fff;
+    &:hover {
+      background: #f56c6c;
+      color: #fff;
+    }
+  }
+}

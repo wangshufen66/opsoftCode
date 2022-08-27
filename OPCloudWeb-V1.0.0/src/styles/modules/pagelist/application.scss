@@ -1,0 +1,22 @@
+.module-detail-list {
+  height: 100%;
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  flex: 1 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.el-col {
+  margin-right: 20px;
+}

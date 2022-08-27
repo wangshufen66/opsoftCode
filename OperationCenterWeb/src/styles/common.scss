@@ -1,0 +1,136 @@
+/****懒加载动画******/
+
+.lazyimage {
+  animation: lazyimage 0.65s;
+}
+
+@keyframes lazyimage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.coverbg {
+  background-size: cover;
+  background-position: center;
+}
+
+.coverbgct0 {
+  background-size: cover;
+  background-position: center 0;
+}
+
+//背景图contain
+.containbg {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.skeleton-item {
+  width: 100%;
+}
+
+.fixedDialog {
+  .el-overlay {
+    display: flex;
+    justify-content: center;
+  }
+  .el-dialog {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-top: 4vh !important;
+    max-height: 80vh;
+    height: max-content;
+    overflow: hidden;
+  }
+  .el-drawer__body,
+  .el-dialog__body {
+    overflow-y: auto;
+  }
+  .el-drawer__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .draw-footer {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.justify-flex-start {
+  justify-content: flex-start !important;
+}
+
+.align-flex-start {
+  align-items: flex-start !important;
+}
+
+.label_error {
+  color: #f56c6c;
+}
+
+.label_success {
+  color: #67c23a;
+}
+
+.divider-wrap {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 10px 8px;
+  margin-bottom: 8px;
+  background-color: #e6e4e4;
+  border-radius: 2px;
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 15px;
+    width: 4px;
+    margin-right: 8px;
+    background-color: #539af8;
+  }
+}
+
+.select-fkey-field {
+  width: 150px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 12px;
+  background-color: rgba(247, 245, 245, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(170, 169, 169, 0.5);
+  //background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(132, 132, 133)), color-stop(0.72, rgb(95, 95, 95)), color-stop(0.86, rgb(56, 56, 56)));
+  &:hover {
+    background-color: rgba(170, 169, 169, 0.8);
+    transition: background-color 0.15s cubic-bezier(0.25, 0.1, 0.25, 0.1);
+  }
+}
+// /* 屏幕大于1800px的时候写死html的font-size值为200px */
+// @media screen and (min-width: 1800px) {
+//   html {
+//       font-size: 200px !important;
+//       /*no*/
+//   }
+// }
+// /* 屏幕小于1300px的时候写死html的font-size值为130px */
+// @media screen and (max-width: 1300px) {
+//   html {
+//       font-size: 130px !important;
+//       /*no*/
+//   }
+// }

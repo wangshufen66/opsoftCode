@@ -1,0 +1,11 @@
+/* 全局样式变量 */
+@import './base.scss';
+
+/* 全局公用样式 */
+@import './common.scss';
+
+/* element全局默认样式 */
+@import './element.scss';
+
+/*自定义字体*/
+@import './fonts.scss';

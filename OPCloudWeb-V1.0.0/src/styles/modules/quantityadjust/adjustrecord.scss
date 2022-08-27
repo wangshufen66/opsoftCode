@@ -1,0 +1,19 @@
+.ajust-record {
+    display: flex;
+    flex: 100%;
+    width: 100%;
+
+    flex-direction: column;
+}
+
+.top {
+    .top-serach {
+        width: 300px;
+        margin-bottom: 13px;
+        display: flex;
+    }
+    .btn-serach{
+        margin-left: 20px;
+
+    }
+}

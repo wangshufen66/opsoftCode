@@ -1,0 +1,29 @@
+.text-button {
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+}
+.text-button:not(:last-child) {
+  margin-right: 10px;
+}
+.is-disabled {
+  background-color: $disabled-bgcolor;
+}
+
+.text-button-primary {
+  color: var(--el-color-primary);
+}
+
+.text-button-success {
+  color: var(--el-color-success);
+}
+
+.text-button-warning {
+  color: var(--el-color-warning);
+}
+.text-button-error {
+  color: var(--el-color-error);
+}
+.text-button-info {
+  color: var(--el-color-info);
+}

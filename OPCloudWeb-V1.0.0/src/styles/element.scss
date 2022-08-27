@@ -1,0 +1,142 @@
+.el-dialog__header,
+.el-drawer__header {
+  border-bottom: 1px solid rgb(224, 222, 222);
+  padding-bottom: 20px;
+}
+
+.property-wrap {
+  &_tabs {
+    background-color: #fff;
+  }
+  .el-tabs__header {
+    margin: 0;
+  }
+  .el-tabs__nav {
+    width: 100%;
+  }
+  .el-tabs__item {
+    text-align: center;
+    width: 50%;
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .el-divider__text {
+    background-color: #d1eefa;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+  }
+}
+
+.el-loading-spinner .circular {
+  width: 42px;
+  height: 42px;
+}
+.property-panel {
+  .el-collapse-item__content {
+    padding: 10px 0px 0px 5px;
+  }
+  .el-collapse-item__header {
+    padding: 0 5px;
+  }
+}
+
+.bpmn-tool {
+  .el-form-item {
+    margin-bottom: 35px;
+    width: 325px;
+  }
+  .el-form-item__error {
+    line-height: 15px;
+    height: 15px;
+  }
+}
+
+.bpmn-listener {
+  .el-form-item {
+    margin-bottom: 38px;
+    max-width: 400px;
+  }
+  .el-form-item__error {
+    line-height: 15px;
+    height: 15px;
+  }
+}
+.role-dialoag-buttom {
+  .el-checkbox-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .el-checkbox {
+    margin-bottom: 10px;
+  }
+  .el-checkbox__label {
+    font-size: 16px;
+  }
+  .el-tree-node__content {
+    align-items: baseline;
+  }
+}
+
+.el-table__fixed {
+  bottom: 0 !important;
+}
+.el-table__fixed-body-wrapper .el-table__body {
+  padding-bottom: 10px; // 滚动条高度
+}
+
+//列强制竖排
+.columRow {
+  // display: flex;
+  // flex-direction: column;
+  // background-color: firebrick;
+
+  [class*="el-col-"] {
+    float: none;
+  }
+}
+
+.el-progress-bar__inner {
+  max-width: 100%;
+}
+
+//进度条内文字
+.progress-wrap {
+  .el-progress-bar__innerText {
+    // font-size: 18px;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+  }
+  .el-progress-bar__outer {
+    border-radius: 10px;
+  }
+  .el-progress-bar__inner {
+    border-radius: 10px;
+  }
+}
+//进度条颜色
+.progress-color-item {
+  .el-form-item {
+    margin-bottom: 5px;
+  }
+  .el-form-item__label {
+    padding: 0 2px;
+  }
+}
+
+.breadcrumb-separator {
+  .el-breadcrumb__separator,
+  .is-link {
+    font-weight: normal;
+  }
+  .is-link {
+    color: $color-primary;
+  }
+}
+
+.el-form-item__content {
+  width: 100%;
+}

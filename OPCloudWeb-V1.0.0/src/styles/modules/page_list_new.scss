@@ -1,0 +1,121 @@
+.m-page-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  height: 100%;
+  .m-page-list-search {
+    display: flex;
+    margin-right: -10px;
+    .el-form {
+      width: 100%;
+      .el-row {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        box-sizing: border-box;
+        // justify-content: center;
+        align-items: center;
+      }
+    }
+    .el-form-item {
+      margin: 10px;
+      width: calc(100% - 20px);
+    }
+  }
+  .m-page-list-tool-bar {
+    margin: 5px 0px 10px 0px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    &-left {
+      display: flex;
+      flex-grow: 1;
+      // background-color: #f8f8f8;
+    }
+    &-right {
+      display: flex;
+      min-width: 200px;
+      // background-color: #f2f2f2;
+      justify-content: flex-end;
+    }
+  }
+  .m-page-list-table {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+  }
+  .m-page-list-pager {
+    height: 50px;
+    display: flex;
+    background-color: #f2f2f2;
+    align-items: center;
+    width: 100%;
+  }
+  .m-page-list-pager-left {
+    height: 50px;
+    display: flex;
+    background-color: #f2f2f2;
+    width: 200px;
+  }
+  .m-page-list-pager-right {
+    height: 50px;
+    display: flex;
+    background-color: #f2f2f2;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.m-page-list-search {
+  height: auto;
+  width: 100%;
+}
+
+.topForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.top-button {
+  display: flex;
+  height: 30px;
+  align-items: center;
+}
+
+.top-serach {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tree-page {
+  width: 100%;
+  display: flex;
+  min-height: 100%;
+  &-left {
+    width: 240px;
+    min-width: 240px;
+    height: 100%;
+    // padding: 10px;
+    border: 1px #ccc solid;
+    // border-right: 1px #f2f2f2 solid;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 240px);
+    padding-left: 15px;
+    height: 100%;
+  }
+}
+
+.flex_end {
+  justify-content: flex-end;
+  display: flex;
+}

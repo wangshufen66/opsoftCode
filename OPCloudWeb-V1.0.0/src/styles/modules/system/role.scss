@@ -1,0 +1,21 @@
+.role-list {
+  display: flex;
+  flex: 1 0 0%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.search-wrap {
+  height: 68px;
+  display: flex;
+}
+.button-wrap {
+  flex: 1;
+}
+.role-dialoag-buttom {
+  // background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

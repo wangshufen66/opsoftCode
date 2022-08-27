@@ -1,0 +1,17 @@
+### 
+GET  http://192.168.0.45:8808/opcloud/apps/getlist?accountGroupId=61
+Content-Type: application/json
+
+
+
+
+###
+GET https://api.idcloud.group/idcloud/index/userCommonList
+Content-Type: application/json
+
+{
+  "type":2,
+  "orgId":63
+}
+
+

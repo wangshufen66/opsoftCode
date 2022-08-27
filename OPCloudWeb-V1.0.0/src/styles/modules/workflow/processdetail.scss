@@ -1,0 +1,36 @@
+.legend {
+    display: flex;
+    .item {
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        &:before {
+            content: '';
+            height: 15px;
+            width: 15px;
+            margin-right: 5px;
+        }
+    }
+    .item:nth-child(1) {
+        &:before {
+            background-color: rgba(243, 98, 98, 0.8);
+        }
+    }
+    .item:nth-child(2) {
+        &:before {
+            background-color: rgba(135, 245, 131, 0.8);
+        }
+    }
+    .item:nth-child(3) {
+        &:before {
+            background-color: rgba(173, 172, 172, 1);
+        }
+    }
+}
+
+.process-image {
+    min-height: 300px;
+    object-fit: contain;
+    width: 100%;
+    object-position: left top;
+}

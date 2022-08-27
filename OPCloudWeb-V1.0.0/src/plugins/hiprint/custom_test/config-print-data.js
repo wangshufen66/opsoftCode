@@ -1,0 +1,37 @@
+﻿var printData = {
+  name: "XXXXX",
+  gender: "男",
+  like: "读书写字",
+  email: "xxx.xxxxx@163.com",
+  address: "工业园区崇文路",
+  phone: "18888888888",
+  target: "搬砖工程师",
+  workExperience: [
+    {
+      position: "xxxxxxxxxxxxxx",
+      company: "xxxxxxxxxxxxxxxx",
+      address: "xxxxxxxxxxxxx",
+      date: "xxxxxxxxxxxx",
+      work: "专题分析/模型，根据业务分析分析各类专题，例如：商品等级，会员消费行为营销活动，重要产品数据等。",
+    },
+    {
+      position: "xxxxxxxxxxx",
+      company: "xxxxxxxxxxxxx",
+      address: "xxxxxxxxxxxx",
+      date: "xxxxxxxxxxxxxxxxx",
+      work: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    },
+    {
+      position: "xxxxxxxxxxxxxxxx",
+      company: "xxxxxxxxxxxxxxxxxx",
+      address: "xxxxxxxxxxxxxxxxxxxx",
+      date: "xxxxxxxxxxxxxxxxxxxxxx",
+      work: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    },
+  ],
+  professional: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  university: "xxxxxxxxxxxxxxxxxxxxxxx",
+  universityAddress: "xxxxxxxxxxxxxxxxxxxxxxx",
+  universityDate: "xxxxxxxxxxxxxxxxxxxxxxxxxx",
+  tech: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+};

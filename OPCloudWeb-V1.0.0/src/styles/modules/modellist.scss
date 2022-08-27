@@ -1,0 +1,21 @@
+.content-search {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-extend {
+  height: calc(100% - 60px);
+}
+.upload-demo {
+  width: 363px;
+  height: 160px;
+  .el-upload--picture-card {
+    width: 363px;
+    height: 184px;
+  }
+  .uploadImg {
+    width: 100%;
+    height: 100%;
+  }
+}
